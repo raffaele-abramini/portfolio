@@ -2,4 +2,8 @@
     margin-bottom: 0;
     position: relative;
     overflow-y: hidden;
+
+    &__title {
+        display: none;
+    }
 }
