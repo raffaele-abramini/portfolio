@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     shell = require('gulp-shell'),
     copy = require('gulp-copy'),
     tinypng = require('gulp-tinypng-compress'),
+    handlebars = require('gulp-compile-handlebars'),
     variables = JSON.parse(fs.readFileSync('./variables.json')),
     secretPath = './secret.json',
     secret = null,
@@ -132,6 +133,26 @@ gulp.task('images', function () {
     }
 });
 
+/**
+ *  HTML
+ */
+gulp.task('html', function () {
+    var templateData = {
+        },
+        options = {
+            batch : [variables.themePath + variables.partialsFolder + variables.includesFolder]
+        };
+
+    return gulp.src([
+            variables.themePath + variables.partialsFolder + variables.layoutsFolder + '*.handlebars'
+        ])
+        .pipe(handlebars(templateData, options))
+        .pipe(rename({
+            extname: ".html"
+        }))
+        .pipe(gulp.dest('./'));
+});
+
 
 /**
  *  Watch
@@ -139,6 +160,7 @@ gulp.task('images', function () {
 gulp.task('watch', function() {
     gulp.watch([variables.themePath + variables.sassFolder + '**/*.scss'],['sass-main']);
     gulp.watch([variables.themePath + variables.jsFolder + 'modules/*.js'],['js-main']);
+    gulp.watch([variables.themePath + variables.partialsFolder + '**/*.handlebars'],['html']);
 });
 
 
