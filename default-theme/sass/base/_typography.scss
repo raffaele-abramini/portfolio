@@ -36,12 +36,16 @@ h6 {
 }
 
 h2 {
-    font-size: 27px;
+    font-size: 16px;
     color: #999999;
     font-weight: 300;
     letter-spacing: 4.09px;
     line-height: 32px;
     text-transform: uppercase;
+
+    @include susy-breakpoint($medium-screen){
+        font-size: 27px;
+    }
 }
 
 h3 {

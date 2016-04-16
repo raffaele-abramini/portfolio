@@ -3,7 +3,27 @@
     position: relative;
     overflow-y: hidden;
 
+    @include susy-breakpoint(0 $medium-screen+-1){
+        height: auto !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .u-animated:not(.section--first .u-animated) {
+            opacity: 1;
+        }
+    }
+
     &__title {
-        display: none;
+        display: block;
+        padding: 10px 10px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 14px;
+        margin-bottom: 13px;
+
+        @include susy-breakpoint($medium-screen){
+            display: none;
+        }
     }
 }

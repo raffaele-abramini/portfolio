@@ -20,7 +20,11 @@ body {
 
 body.menu-opened {
     overflow-y: hidden;
-    @include transform(translate3d(-20%, 0,0));
+    @include transform(translate3d(-100%, 0,0));
+
+    @include susy-breakpoint($medium-screen){
+        @include transform(translate3d(-20%, 0,0));
+    }
 }
 
 .header--main,

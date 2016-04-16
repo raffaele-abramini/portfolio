@@ -1,22 +1,45 @@
 .about {
     &__copy {
-        @include padding(null 50px);
+        font-size: 13px;
+        padding-left: 0px;
+        padding-right: 0px;
+
         @include susy-breakpoint($medium-screen){
             @include span(6);
+            @include padding(null 100px);
+            font-size: 15px;
         }
 
+        @include susy-breakpoint($large-screen){
+            @include padding(null 50px);
+            font-size: 17px;
+        }
+
+
         h2 {
-            margin-bottom: 40px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            padding-top: 10px;
             text-transform: none;
+
+            @include susy-breakpoint($medium-screen) {
+                padding-top: 0;
+                margin-bottom: 40px;
+            }
         }
     }
 
     &__wallpaper {
-        @include position(absolute, 0 0 null null);
-        background: url(../img/about-bg.jpg) right bottom no-repeat;
-        background-attachment: fixed;
-        height: 100%;
-        width: 48% ;
-        overflow: hidden;
+        display: none;
+
+        @include susy-breakpoint($large-screen) {
+            @include position(absolute, 0 0 null null);
+            display: block;
+            background: url(../img/about-bg.jpg) right bottom no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            width: 48%;
+            overflow: hidden;
+        }
     }
 }

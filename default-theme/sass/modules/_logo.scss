@@ -1,9 +1,22 @@
 h1.logo {
+
+    width: 130px;
+    height: 130px;
+
     margin: -20px auto 0;
-    width: 180px;
-    height: 180px;
     text-indent: -99999px;
     background: url(../img/logo.png) center center no-repeat;
     -webkit-background-size:  100% 100%;
     background-size:  100% 100%;
+
+    @include susy-breakpoint($medium-screen){
+        width: 180px;
+        height: 180px;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        & {
+            background-image: url(../img/logo@2x.png);
+        }
+    }
 }
