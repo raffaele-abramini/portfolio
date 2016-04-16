@@ -1,0 +1,31 @@
+.nav-toggle {
+    &--open i {
+        color: #97bfb4;
+        font-size: 22px;
+    }
+    &--open h3 {
+        font-size: 21px;
+        margin: 0px;
+        display: inline;
+        position: relative;
+        left: -10px;
+    }
+    &--open h3.white {
+        color: #fff;
+    }
+    &--open h3.black {
+        color: #000;
+    }
+
+    &--open,
+    &--close {
+        right: 10px;
+        position: fixed;
+        top: 10px;
+        font-size: 20px;
+    }
+
+    &--close {
+        color: #fff;
+    }
+}

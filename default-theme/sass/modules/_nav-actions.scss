@@ -1,0 +1,22 @@
+.nav-actions {
+    &__item {
+        position: fixed;
+        right: 10px;
+        color: $action-color;
+        font-size: 32px;
+        line-height: 31px;
+
+        &:first-child {
+            top: 50px;
+        }
+
+        &:last-child {
+            top: 85px;
+        }
+
+        &--disabled {
+            color: #ddd;
+            cursor: default;
+        }
+    }
+}

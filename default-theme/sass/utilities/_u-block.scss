@@ -1,0 +1,32 @@
+.u-relative {
+    position: relative;
+}
+.u-animated {
+    opacity: 0;
+}
+.u-noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.u-fixed {
+    position: fixed;
+    z-index: 2;
+}
+
+.u-vertical-centered {
+    position: relative;
+}
+
+.u-highlight {
+    color: $action-color;
+}
+
+
+*[data-animation="fade-in"] {
+    opacity: 0;
+}

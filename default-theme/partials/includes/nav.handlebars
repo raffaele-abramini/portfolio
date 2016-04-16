@@ -1,17 +1,19 @@
 <nav>
-    <button id="nav-open" class="fixed animated noselect">
+    <button class="u-fixed u-animated u-noselect nav-toggle nav-toggle--open">
         <i class="fa fa-bars"></i>
     </button>
-    <button id="prev-section" class="section-nav fixed disabled animated noselect"><i class="fa fa-angle-up"></i></button>
-    <button id="next-section" class="section-nav fixed animated noselect"><i class="fa fa-angle-down"></i></button>
-    <div id="nav" class="full-height fixed noselect">
-        <button id="nav-close">X</button>
-        <ul class="v-centered">
+    <div class="nav-actions">
+        <button id="prev-section" class="nav-actions__item nav-actions__item--disabled  u-fixed u-animated u-noselect"><i class="fa fa-angle-up"></i></button>
+        <button id="next-section" class="nav-actions__item  u-fixed u-animated u-noselect"><i class="fa fa-angle-down"></i></button>
+    </div>
+    <div class="nav--main u-fixed u-noselect">
+        <button class="nav-toggle nav-toggle--open">X</button>
+        <ul class="v-centered nav--main__list">
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills &amp; Knowledge</a></li>
         </ul>
-        <div class="nav-social">
+        <div class="nav--main__social">
             <a href="mailto:raffaele.abramini@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
             <a href="https://it.linkedin.com/in/raffaeleabramini" target="_blank"><i class="fa fa-linkedin"></i></a>
             <a href="https://twitter.com/anyoldirony" target="_blank"><i class="fa fa-twitter"></i></a>
