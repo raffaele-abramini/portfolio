@@ -1,0 +1,55 @@
+.skills {
+    .skills-group {
+        text-align: center;
+        margin: 0 auto 12px;
+
+        &__title {
+            cursor: pointer;
+            margin-top: 0;
+        }
+
+        &__wrap {
+            height: 0;
+            overflow: hidden;
+            margin-bottom: -1px;
+            background: $dirt-white;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+
+            &.opened {
+                height: auto;
+            }
+        }
+
+        hr {
+            width: 200px;
+            margin: auto;
+        }
+    }
+
+    .skill {
+        float: left;
+        width: 20%;
+        height: 100px;
+        opacity: 0;
+
+        &__icon {
+            font-family: 'FontAwesome';
+            font-size:40px;
+            color: $action-color;
+            line-height: 53px;
+            padding-top: 12px;
+        }
+
+        &__title {
+            font-weight: 100;
+            font-size: 15px;
+            color: #000000;
+            line-height: 22px;
+            margin-top: 0;
+            margin-bottom: 0px;
+            padding-bottom: 7px;
+        }
+    }
+}
