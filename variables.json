@@ -9,8 +9,12 @@
   "layoutsFolder" : "layouts/",
   "includesFolder" : "includes/",
   "jsVendorsPath" : [
-    "bower_components/jQuery/dist/jquery.min.js",
-    "bower_components/js-cookie/src/js.cookie.js"
+    "bower_components/jquery/dist/jquery.js",
+    "bower_components/js-cookie/src/js.cookie.js",
+    "bower_components/velocity/velocity.js",
+    "bower_components/velocity/velocity.ui.js",
+    "bower_components/waypoints/lib/jquery.waypoints.js",
+    "bower_components/jquery.hoverdir/jquery.hoverdir.js"
   ],
   "cssVendorsPath" : [
 
