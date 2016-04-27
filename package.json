@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "browser-sync": "^2.12.3",
     "gulp": "^3.9.1",
+    "gulp-connect-php": "0.0.7",
     "gulp-clean-css": "^2.0.3",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.0",

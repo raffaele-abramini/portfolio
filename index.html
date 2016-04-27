@@ -1,22 +1,374 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/default-theme/css/screen.min.css">
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Old Irony - Raffaele Abramini</title>
+    <meta name="description" content="Raffaele Abramini's Web Portfolio: Web Development, Web Design.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<header class="header--main">
-    <nav><ul><li>asd</li></ul></nav>
-</header>
-<main>
-    <div class="main--inner">
-        <h1>Title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem, dicta eos ipsam iste laboriosam libero, mollitia nihil obcaecati officia perspiciatis placeat possimus quam quasi quibusdam sed sit, voluptatibus. Dolores.</p>
+    <link rel="icon" type="image/png" href="img/favicon.png?c=5" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:title" content="Old Irony - Raffaele Abramini">
+    <meta property="og:description" content="Raffaele Abramini's Web Portfolio: Web Development, Web Design.">
+    <meta property="og:image" content="http://oldirony.cc/img/logo-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/default-theme/css/screen.css">
+
+    <script src="//use.typekit.net/bzn0grm.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]--><nav>
+    <button class="u-fixed u-animated u-noselect nav-toggle nav-toggle--open">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="nav-actions">
+        <button id="prev-section" class="nav-actions__item nav-actions__item--disabled  u-fixed u-animated u-noselect"><i class="fa fa-angle-up"></i></button>
+        <button id="next-section" class="nav-actions__item  u-fixed u-animated u-noselect"><i class="fa fa-angle-down"></i></button>
+    </div>
+    <div class="nav-main u-fixed u-noselect">
+        <button class="nav-toggle nav-toggle--open">X</button>
+        <ul class="u-vertical-centered nav-main__list">
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills &amp; Knowledge</a></li>
+        </ul>
+        <div class="nav-main__social">
+            <a href="mailto:raffaele.abramini@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://it.linkedin.com/in/raffaeleabramini" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/anyoldirony" target="_blank"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+</nav>
+<main id="home">
+    <header id="intro" class="section section--first intro" data-title="" data-color="gray">
+        <h1 class="logo u-animated u-vertical-centered">
+            Old Irony - Web Development &amp; Design
+            <img src="/default-theme/img/logo@2x.png" alt="Old Irony Web Development" width="360" height="360">
+        </h1>
+        <h2 class="intro__subtitle u-animated u-noselect">Web Development</h2>
+    </header>
+    <div id="portfolio" class="section portfolio toAnimate" data-title="Portfolio" data-color="white">
+        <h4 class="section__title">Portfolio</h4>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/bsc.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">British Study Centres</h3>
+                <span class="portfolio__element__url">british-study.com</span>
+                <a class="portfolio__element__url" target="_blank" href="http://british-study.com/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Frontend Development, Responsive, PHP, jQuery, JSON Multilingual System</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/bsc_blog.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Blog - British Study Centres</h3>
+                <span class="portfolio__element__url">british-study.com/blog</span>
+                <a class="portfolio__element__url" target="_blank" href="http://british-study.com/blog/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/cdc.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Corriere di Como</h3>
+                <span class="portfolio__element__url">corrieredicomo.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://corrieredicomo.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery, Custom Backend</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/valpoci.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Valpoci</h3>
+                <span class="portfolio__element__url">valpoci.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://valpoci.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/atuttogoal.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">A Tutto Goal</h3>
+                <span class="portfolio__element__url">atuttogoal.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://atuttogoal.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Design, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/exa.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Exa Pumps</h3>
+                <span class="portfolio__element__url">exapumps.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://exapumps.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Design, Development, restricted areas, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/fola.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Folatti</h3>
+                <span class="portfolio__element__url">folatti.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://folatti.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, user custom contens, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/kpm.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">KPM Broaching</h3>
+                <span class="portfolio__element__url">kpmbroaching.com</span>
+                <a class="portfolio__element__url" target="_blank" href="http://kpmbroaching.com/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Landing Page, Design, Development, Responsive, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/dema.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Dema Costruzioni</h3>
+                <span class="portfolio__element__url">dema-costruzioni.com</span>
+                <a class="portfolio__element__url" target="_blank" href="http://dema-costruzioni.com/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/tessile.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Tessile &amp; Salute</h3>
+                <span class="portfolio__element__url">tessileesalute.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://tessileesalute.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/immob.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Immobiliare Morbegno</h3>
+                <span class="portfolio__element__url">immobiliaremorbegno.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://immobiliaremorbegno.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/cptech.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">CP Technology</h3>
+                <span class="portfolio__element__url">cptechnology.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://cptechnology.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/latteria.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Latteria Valtellina</h3>
+                <span class="portfolio__element__url">latteriavaltellina.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://latteriavaltellina.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/scuolalat.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Latteria Valtellina: Progetto Scuola</h3>
+                <span class="portfolio__element__url">scuola.latteriavaltellina.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://scuola.latteriavaltellina.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/miele.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Miele Dell'Orto</h3>
+                <span class="portfolio__element__url">mieledellorto.it</span>
+                <a class="portfolio__element__url" target="_blank" href="http://mieledellorto.it/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/blp.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">BLP Costruzioni</h3>
+                <span class="portfolio__element__url">blpcostruzioni.com</span>
+                <a class="portfolio__element__url" target="_blank" href="http://blpcostruzioni.com/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, PHP, jQuery</div>
+            </div>
+        </div>
+        <div class="portfolio__element u-animated" style="background-image:url(/default-theme/img/portfolio/okaypap.jpg);">
+            <div class="portfolio__element__inner">
+                <h3 class="portfolio__element__title">Okaypaper</h3>
+                <span class="portfolio__element__url">www.okaypaper.com</span>
+                <a class="portfolio__element__url" target="_blank" href="http://www.okaypaper.com/"><i class="fa fa-link"></i></a>
+                <div class="portfolio__element__details">Wordpress, Development, PHP, jQuery</div>
+            </div>
+        </div>
+        <button id="show-more-portfolio" class="utility">Show more <i class="fa fa-plus"></i></button>
+    </div>    <div id="about" class="section toAnimate" data-title="about me" data-color="black">
+        <div class="about__copy">
+            <div class="u-vertical-centered">
+                <h2>Hi! I am Raffaele</h2>
+                <p class="u-animated">I’m a young Italian <span class="u-highlight">web developer</span> and I love coding and building websites. I earned a Bachelor’s degree in Communication Design at Polytechnic University of Milan in 2012. For two years I worked in a communication agency. I have knowledge of web languages such as html, css, javascript, PHP, SQL and techniques such as SEO, mobile optimization, UI &amp; UX improvement.</p>
+                <p class="u-animated">Bored by the static Italian enviroment, I decided to move to London in September 2014 where I have been hired as a Front-End Developer by a prestigious School of English. I coded the website for this school, side by side with a great developer and a famous designer.</p>
+                <p class="u-animated">After the publishing of the website (and some good, old, live corrections), I projected and developed a webapp for doing and marking the online student initial test.</p>
+            </div>
+        </div>
+        <div class="about__wallpaper"></div>
+    </div>    <div id="skills" class="skills section toAnimate section--last" data-title="skills &amp; knowledge" data-color="gray">
+        <div class="skills__inner u-vertical-centered">
+            <h4 class="section__title">Skills &amp; Knowledge</h4>
+            <div class="skills-group animated">
+                <h3 class="skills-group__title">Languages</h3>
+                <div class="skills-group__wrap">
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">HTML 5</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">CSS 3</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">PHP</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">javascript</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">sql</h4>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="skills-group animated">
+                <h3 class="skills-group__title">CMS</h3>
+                <div class="skills-group__wrap">
+                    <div class="skill">
+                        <i class="skill__icon fa fa-wordpress"></i>
+                        <h4 class="skill__title">Wordpress</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-joomla"></i>
+                        <h4 class="skill__title">Joomla</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-drupal"></i>
+                        <h4 class="skill__title">Drupal</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-shopping-cart"></i>
+                        <h4 class="skill__title">Opencart</h4>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="skills-group animated">
+                <h3 class="skills-group__title">Libraries</h3>
+                <div class="skills-group__wrap">
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">jQuery</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">AJAX</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Meteor.js *</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Node.js *</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Grunt</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">LESS, SASS</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Bootstrap</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Backbone.js *</h4>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="skills-group animated">
+                <h3 class="skills-group__title">Software</h3>
+                <div class="skills-group__wrap">
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Sublime Text</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Sketch</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Photoshop</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Illustrator</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">inDesign</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Office Package</h4>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="skills-group animated">
+                <h3 class="skills-group__title">Miscellaneous</h3>
+                <div class="skills-group__wrap">
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Responsive Websites</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">SEO</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">IE Optimization</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Google Analytics</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">Campaign Monitor</h4>
+                    </div>
+                    <div class="skill">
+                        <i class="skill__icon fa fa-gear"></i>
+                        <h4 class="skill__title">FB, Twitter &amp; Social API</h4>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
     </div>
 </main>
-<footer class="footer--main"></footer>
-<script src="/default-theme/js/main.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/default-theme/js/vendors.min.js"></script>
+<script src="/default-theme/js/main.min.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-40778741-7', 'auto');ga('send', 'pageview');
+</script>
+
 </body>
 </html>

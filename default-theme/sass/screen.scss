@@ -14,7 +14,16 @@ $susy: (
 @import "base/base";
 
 // Modules
-//@import "modules/";
+@import "modules/footer";
+@import "modules/logo";
+@import "modules/nav";
+@import "modules/nav-actions";
+@import "modules/nav-toggle";
+@import "modules/section";
+@import "modules/section-about";
+@import "modules/section-intro";
+@import "modules/section-portfolio";
+@import "modules/section-skills";
 
 // Themes
 //@import "themes/";

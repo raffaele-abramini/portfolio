@@ -11,6 +11,8 @@ var gulp = require('gulp'),
     copy = require('gulp-copy'),
     tinypng = require('gulp-tinypng-compress'),
     handlebars = require('gulp-compile-handlebars'),
+    connect = require('gulp-connect-php'),
+    browserSync = require('browser-sync'),
     variables = JSON.parse(fs.readFileSync('./variables.json')),
     secretPath = './secret.json',
     secret = null,
@@ -151,6 +153,15 @@ gulp.task('html', function () {
             extname: ".html"
         }))
         .pipe(gulp.dest('./'));
+});
+
+gulp.task('connect', function() {
+    connect.server({}, function (){
+        browserSync({
+            proxy: '127.0.0.1:8000'
+        });
+    });
+
 });
 
 
