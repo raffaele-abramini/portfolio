@@ -5,6 +5,9 @@
     top: 0;
     width: 100%;
     background: $secondary-background-color;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
     @include transform(translate3d(100%,0,0));
 
     @include susy-breakpoint($medium-screen){

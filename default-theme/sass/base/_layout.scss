@@ -18,7 +18,7 @@ body {
     @include transition-timing-function(cubic-bezier(0.230, 1.000, 0.320, 1.000));
 }
 
-body.menu-opened {
+body.js-menu-opened {
     overflow-y: hidden;
     @include transform(translate3d(-100%, 0,0));
 

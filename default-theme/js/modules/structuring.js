@@ -7,37 +7,36 @@ var page = {
     },
     init : function(){
         $(window).scrollTop(0);
-        page.structuring(true);
         if($('.section-nav').length > 0){
             page.data.sectionNav = true;
         }
 
         // Section navigation
         $('body').on('click', '#prev-section', function(){
-            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$('body').hasClass('menu-opened')){
+            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$('body').hasClass('js-menu-opened')){
                 $('.section-nav').addClass('false');
                 $(page.data.current).prev('.section').velocity("scroll", { duration: 700, easing: "easeOutCubic", complete: function(){$('.section-nav').removeClass('false');}});
             }
         });
         $('body').on('click', '#next-section', function(){
-            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$('body').hasClass('menu-opened')){
+            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$('body').hasClass('js-menu-opened')){
                 $('.section-nav').addClass('false');
                 $(page.data.current).next('.section').velocity("scroll", { duration: 700, easing: "easeOutCubic", complete: function(){$('.section-nav').removeClass('false');}});
             }
         });
 
         // Menu Control
-        $('#nav-open').click(function(){
+        $('.nav-toggle--open').click(function(){
             if($(this).hasClass('menu-opened')){
                 page.menu.close();
             } else {
                 page.menu.open();
             }
         });
-        $('#nav-close').click(function(){
+        $('.nav-toggle--close').click(function(){
             page.menu.close();
         });
-        $('#nav').on('click', 'li a', function(e){
+        $('.nav-main').on('click', 'li a', function(e){
             e.preventDefault();
             page.scrollTo($(this));
         });
@@ -54,11 +53,23 @@ var page = {
 
     },
 
-
     menu : {
-        open : function(){$('.fixed').each(function(){	var t = $(this);	t.css({position: 'absolute',top: t.offset().top});});$('body').addClass('menu-opened');$('#nav-close, #nav ul li').velocity('transition.slideRightIn', {duration:200, stagger:80});setTimeout(function(){$('#nav-open').addClass('menu-opened');}, 320);
+        open : function(){
+            $('.u-fixed').each(function(){
+                var t = $(this);
+                t.css({position: 'absolute',top: t.offset().top});
+            });
+            $('body').addClass('js-menu-opened');
+            $('.nav-toggle--close, #nav ul li').velocity('transition.slideRightIn', {duration:200, stagger:80});                       setTimeout(function(){$('.nav-toggle--open').addClass('js-menu-opened');}, 320);
         },
-        close : function(complete){$('.fixed').each(function(){	var t = $(this);	$('body').removeClass('menu-opened'); 	setTimeout(function(){t.css({position: '',top: ''});if(complete){complete();}}, 320);});$('#nav-open').removeClass('menu-opened');
+        close : function(complete){
+            $('.u-fixed').each(function(){
+                var t = $(this);
+                $('body').removeClass('js-menu-opened');
+                setTimeout(function(){t.css({position: '',top: ''});
+                    if(complete){complete();}
+                }, 320);});
+            $('.nav-toggle--open').removeClass('js-menu-opened');
         }
     },
     scrollTo : function(t){
@@ -136,18 +147,6 @@ var page = {
 
     },
 
-    resize : function(){
-        page.data.h = $(window).height();
-        page.data.w = $(window).width();
-        page.setSectionH(page.data.h);
-        page.centerElements(page.data.h);
-        page.distributePortfolio(page.data.w);
-    },
-
-    setSectionH : function(h){
-        $('#section-height').remove();
-        $('body').append('<style id="section-height">.section,.full-height {height:'+h+'px;min-height:'+h+'px;}</style>');
-    },
     centerElements : function(h){
         $('.v-centered').each(function(){
             var t = $(this);
@@ -158,8 +157,8 @@ var page = {
     sectionReached : function(_this){
         var t = _this.data('title');
         var c = _this.data('color');
-        $('#nav-open').find('h3').remove();
-        $('#nav-open').prepend('<h3 class="'+c+'">'+t+'</h3>');
+        $('.nav-toggle--open').find('h3').remove();
+        $('.nav-toggle--open').prepend('<h3 class="'+c+'">'+t+'</h3>');
         page.data.current = '#'+_this.attr('id');
         if(page.data.sectionNav){
             if(_this.hasClass('first')){$('#prev-section').addClass('disabled');}
@@ -208,6 +207,7 @@ var page = {
 $(window).load(function(){
 
     $('body').css({opacity:1});
+    page.init();
     $.Velocity.RunSequence(page.animations.intro);
     if(window.outerWidth >= 768){
         page.homeWaypoint();

@@ -1,4 +1,9 @@
 .skills {
+    height: 100vh;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+
     .skills-group {
         text-align: center;
         margin: 0 auto 12px;
