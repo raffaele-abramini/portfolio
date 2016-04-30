@@ -1,17 +1,22 @@
 .about {
     &__copy {
+        min-height: 100vh;
         font-size: 13px;
         padding-left: 0px;
         padding-right: 0px;
 
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+
         @include susy-breakpoint($medium-screen){
-            @include span(6);
-            @include padding(null 100px);
+            @include padding(40px 100px);
             font-size: 15px;
         }
 
         @include susy-breakpoint($large-screen){
-            @include padding(null 50px);
+            @include span(6);
+            @include padding(40px 50px);
             font-size: 17px;
         }
 

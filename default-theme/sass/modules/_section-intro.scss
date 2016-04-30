@@ -1,4 +1,8 @@
 .intro {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+
     &__subtitle {
         position: absolute;
         width: 100%;
