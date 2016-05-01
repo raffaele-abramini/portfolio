@@ -24,6 +24,7 @@
             border-bottom: 1px solid #fff;
             text-align: center;
             width: 33.3%;
+            padding: 0;
         }
 
         @include susy-breakpoint($large-screen){
@@ -34,9 +35,12 @@
             width: 20%;
         }
 
+        img {
+            display: block;
+        }
+
         &__inner {
             width: 100%;
-            background: rgba(151, 191, 180 , 0.8);
             opacity: 1;
             background: none;
             position: static;
@@ -45,7 +49,15 @@
             @include susy-breakpoint($medium-screen) {
                 color: #fff;
                 position: absolute;
-                top:-100%;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: rgba(151, 191, 180 , 0.8);
+                @include display(flex);
+                @include flex-direction(column);
+                @include justify-content(center);
+
+                @include transform(translateY(-100%));
             }
 
             .portfolio__element:hover & {

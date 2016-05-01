@@ -176,6 +176,6 @@ $(window).load(function(){
     $.Velocity.RunSequence(page.animations.intro);
     if(window.outerWidth >= 768){
         page.homeWaypoint();
-        $(' #portfolio > div ').hoverdir();
+        $('.portfolio__element').hoverdir();
     }
 });

@@ -1,0 +1,131 @@
+.in-left {
+    .hover-dir {
+        @include animation(leftIn 0.4s forwards);
+    }
+}
+
+@include keyframes(leftIn) {
+    from {
+        @include transform(translate3d(-100%,0,0));
+    }
+    to {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
+.out-left {
+    .hover-dir {
+        @include animation(leftOut 0.4s forwards);
+    }
+}
+
+@include keyframes(leftOut) {
+    from {
+        @include transform(translate3d(0,0,0));
+    }
+    to {
+        @include transform(translate3d(-100%,0,0));
+    }
+}
+
+
+// right
+
+
+.in-right {
+    .hover-dir {
+        @include animation(rightIn 0.4s forwards);
+    }
+}
+
+@include keyframes(rightIn) {
+    from {
+        @include transform(translate3d(100%,0,0));
+    }
+    to {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
+.out-right {
+    .hover-dir {
+        @include animation(rightOut 0.4s forwards);
+    }
+}
+
+@include keyframes(rightOut) {
+    from {
+        @include transform(translate3d(0,0,0));
+    }
+    to {
+        @include transform(translate3d(100%,0,0));
+    }
+}
+
+
+// top
+
+
+.in-top {
+    .hover-dir {
+        @include animation(topIn 0.4s forwards);
+    }
+}
+
+@include keyframes(topIn) {
+    from {
+        @include transform(translate3d(0,-100%,0));
+    }
+    to {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
+.out-top {
+    .hover-dir {
+        @include animation(topOut 0.4s forwards);
+    }
+}
+
+@include keyframes(topOut) {
+    from {
+        @include transform(translate3d(0,0,0));
+    }
+    to {
+        @include transform(translate3d(0,-100%,0));
+    }
+}
+
+
+// bottom
+
+
+.in-bottom {
+    .hover-dir {
+        @include animation(bottomIn 0.4s forwards);
+    }
+}
+
+@include keyframes(bottomIn) {
+    from {
+        @include transform(translate3d(0,100%,0));
+    }
+    to {
+        @include transform(translate3d(0,0,0));
+    }
+}
+
+.out-bottom {
+    .hover-dir {
+        @include animation(bottomOut 0.4s forwards);
+    }
+}
+
+@include keyframes(bottomOut) {
+    from {
+        @include transform(translate3d(0,0,0));
+    }
+    to {
+        @include transform(translate3d(0,100%,0));
+    }
+}
