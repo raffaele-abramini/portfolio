@@ -134,6 +134,7 @@
             height: 55px;
             background: rgba(255, 255, 255, 0.95);
             left: 0;
+            display: block;
             @include transition(all .3s);
 
             &:hover {

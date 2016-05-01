@@ -42,11 +42,11 @@ var page = {
         });
 
         // Click listeners
-        $('body').on('click', '#show-more-portfolio', function(){
+        $('body').on('click', '.js-portfolio__show-more', function(){
             page.increasePortfolioHeight($(this));
         });
 
-        $('body').on('click', '.skill-group h3', function(){
+        $('body').on('click', '.skills-group__title', function(){
             page.openSkills($(this));
         });
 
@@ -77,31 +77,11 @@ var page = {
             $(t.attr('href')).velocity("scroll", { duration: 700, easing: "easeOutCubic" });
         });
     },
-
-    distributePortfolio : function(w){
-        if($('#portfolio-style').length > 0){$('#portfolio-style').remove();}
-        $('body').append('<style id="portfolio-style">#portfolio .portfolio-element{height:'+Math.floor(w/page.data.portfolioNumber)+'px;}</style>');
-        var e = $('#portfolio .portfolio-element .inner');
-        e.each(function(){
-            var t = $(this);
-            var p = t.parent();
-            var pd = (p.height() -t.height())/2;
-            t.css({'padding': pd+'px 0 '+pd+'px'});
-        });
-    },
-
+    
     increasePortfolioHeight : function(t){
-        $('.section').waypoint('destroy');
-        var p = t.parent();
-        var n = t.siblings().length;
-        if((n/page.data.portfolioNumber) > Math.floor(n/page.data.portfolioNumber)){
-            n = Math.floor(n/page.data.portfolioNumber) + 1;
-        } else {
-            n = n/page.data.portfolioNumber;
-        }
-        var oh = t.siblings('.portfolio-element').first().height();
-        var fh = oh*n;
-        p.velocity({height:fh}, {complete:function(){
+        var $portfolio = $('.portfolio');
+
+        $portfolio.velocity({height:$portfolio.get(0).scrollHeight}, {complete:function(){
             t.remove();
             page.homeWaypoint();
         }});
@@ -122,38 +102,23 @@ var page = {
     },
 
     closeSkills : function(t, complete){
-        $('.skill-group .skills-container').not(t).velocity({height:0}, {delay:0, complete: function(){complete();}});
+        t.siblings().children('.skills-group__wrap').velocity({height:0}, {delay:0, complete: function(){complete();}});
         page.openedSkill.find('.skill').css({opacity:0});
     },
 
+    openedSkill : null,
 
     openSkills : function(t){
+        var $skillGroup = t.parent(),
+            $skillWrap = t.siblings('.skills-group__wrap');
+        page.openedSkill = $skillGroup;
 
-        var c = t.siblings('.skills-container');
-        page.openedSkill = c;
-        var n = parseInt(c.data('n'));
-        var oh = parseInt(c.data('oh'));
-        var fh = oh*n;
-        c.velocity({height:fh},{duration: 50, easing:"spring", complete:function(){
-            c.find('.skill').velocity('transition.bounceIn', {delay:200,stagger:100});
+        $skillWrap.velocity({height:$skillWrap.get(0).scrollHeight},{duration: 50, easing:"spring", complete:function(){
+            $skillWrap.find('.skill').velocity('transition.bounceIn', {delay:200,stagger:100});
         }});
-        page.closeSkills(c, function(){
-            setTimeout(function(){
-                var vc = $('#skills').children();
-                var m = (page.data.h - vc.height())/2;
-                if(page.data.w > 767){vc.velocity({top:m},{duration:400});}
-            },300);
-        });
-
+        page.closeSkills($skillGroup);
     },
 
-    centerElements : function(h){
-        $('.v-centered').each(function(){
-            var t = $(this);
-            var m = (h - t.height())/2;
-            if(m>0){t.css({top:m});}
-        });
-    },
     sectionReached : function(_this){
         var t = _this.data('title');
         var c = _this.data('color');
@@ -179,9 +144,9 @@ var page = {
                 if(_this.attr('id') == 'skills'){$.Velocity.RunSequence(page.animations.skills); }
             }
         }, {offset:'15%'});
-        $('.section').not('.fixed').waypoint(function(direction) {
+        $('.section').not('.u-fixed').waypoint(function(direction) {
             if(direction == 'up'){
-                page.sectionReached($(this));
+                page.sectionReached($(this.element));
 
             }
         }, {offset:'-90%'});
