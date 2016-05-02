@@ -102,5 +102,178 @@
       "tags": "Wordpress, Development, PHP, jQuery",
       "image": "/default-theme/img/portfolio/okaypap.jpg"
     }
+  ],
+
+  "porco" : "caneporco",
+  "skills-groups" : [
+    {
+      "title" : "Languages",
+      "skills" : [
+        {
+          "title" : "javascript",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "SASS",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "HTML 5",
+          "icon" : "fa-html5"
+        },
+        {
+          "title" : "PHP",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "SHELL",
+          "icon" : "fa-terminal"
+        },
+        {
+          "title" : "Ruby + Rails",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "MySQL",
+          "icon" : "fa-gear"
+        }
+      ]
+    },
+    {
+      "title" : "CMS",
+      "skills" : [
+        {
+          "title" : "Silverstripe",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Wordpress",
+          "icon" : "fa-wordpress"
+        },
+        {
+          "title" : "Joomla",
+          "icon" : "fa-joomla"
+        },
+        {
+          "title" : "Drupal",
+          "icon" : "fa-drupal"
+        },
+        {
+          "title" : "Opencart",
+          "icon" : "fa-shopping-cart"
+        }
+      ]
+    },
+    {
+      "title" : "Libraries, preprocessor and friends",
+      "skills" : [
+        {
+          "title" : "Angular",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Gulp",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Grunt",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Docker",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Vagrant",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "jQuery",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Bourbon",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Susy",
+          "icon" : "fa-gear"
+        }
+      ]
+    },
+    {
+      "title" : "Software",
+      "skills" : [
+        {
+          "title" : "PhpStorm",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Sublime Text",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "RubyMine",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Sketch",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Inkscape",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Photoshop",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Illustrator",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "inDesign",
+          "icon" : "fa-gear"
+        }
+      ]
+    },
+    {
+      "title" : "Misc",
+      "skills" : [
+        {
+          "title" : "Object-oriented programming",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Responsive Websites",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "SEO",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "IE Optimisation",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Google Tag Manager",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Google Analytics",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Campaign Monitor",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "G+, FB, Twitter & Social API",
+          "icon" : "fa-gear"
+        }
+      ]
+    }
   ]
 }

@@ -1,151 +1,21 @@
 <div id="skills" class="skills section js-animated section--last" data-title="skills &amp; knowledge" data-color="gray">
     <div class="skills__inner u-vertical-centered">
         <h4 class="section__title u-animated">Skills &amp; Knowledge</h4>
-        <div class="skills-group u-animated">
-            <h3 class="skills-group__title">Languages</h3>
-            <div class="skills-group__wrap">
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">HTML 5</h4>
+
+        {{#skills-groups}}
+            <div class="skills-group u-animated">
+                <h3 class="skills-group__title">{{title}}</h3>
+                <div class="skills-group__wrap">
+                {{#skills}}
+                    <div class="skill">
+                        <i class="skill__icon fa {{icon}}"></i>
+                        <h4 class="skill__title">{{title}}</h4>
+                    </div>
+                {{/skills}}
                 </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">CSS 3</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">PHP</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">javascript</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">sql</h4>
-                </div>
+                <hr>
             </div>
-            <hr>
-        </div>
-        <div class="skills-group u-animated">
-            <h3 class="skills-group__title">CMS</h3>
-            <div class="skills-group__wrap">
-                <div class="skill">
-                    <i class="skill__icon fa fa-wordpress"></i>
-                    <h4 class="skill__title">Wordpress</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-joomla"></i>
-                    <h4 class="skill__title">Joomla</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-drupal"></i>
-                    <h4 class="skill__title">Drupal</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-shopping-cart"></i>
-                    <h4 class="skill__title">Opencart</h4>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="skills-group u-animated">
-            <h3 class="skills-group__title">Libraries</h3>
-            <div class="skills-group__wrap">
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">jQuery</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">AJAX</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Meteor.js *</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Node.js *</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Grunt</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">LESS, SASS</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Bootstrap</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Backbone.js *</h4>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="skills-group u-animated">
-            <h3 class="skills-group__title">Software</h3>
-            <div class="skills-group__wrap">
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Sublime Text</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Sketch</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Photoshop</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Illustrator</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">inDesign</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Office Package</h4>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="skills-group u-animated">
-            <h3 class="skills-group__title">Miscellaneous</h3>
-            <div class="skills-group__wrap">
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Responsive Websites</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">SEO</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">IE Optimization</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Google Analytics</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">Campaign Monitor</h4>
-                </div>
-                <div class="skill">
-                    <i class="skill__icon fa fa-gear"></i>
-                    <h4 class="skill__title">FB, Twitter &amp; Social API</h4>
-                </div>
-            </div>
-            <hr>
-        </div>
+        {{/skills-groups}}
+
     </div>
 </div>

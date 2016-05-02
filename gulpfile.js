@@ -180,7 +180,7 @@ gulp.task('watch', function() {
 /**
  *  Callable Task
  */
-gulp.task('deploy', ['vendors', 'sass-main', 'js-main', 'images']);
+gulp.task('deploy', ['vendors', 'sass-main', 'js-main', 'html']);
 
 // Gulp deploy and watch called via shell to keep the sequence
 gulp.task('default', shell.task([
