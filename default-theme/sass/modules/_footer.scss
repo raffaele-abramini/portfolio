@@ -24,9 +24,10 @@ footer .footer-social a {
     @include clearfix();
     background: #97BFB4;
 
-    &:first-child {
-        @include susy-breakpoint($medium-screen){
-            @include span(4);
+    > *:first-child {
+
+        @include susy-breakpoint($medium-screen) {
+            @include span(8);
         }
 
         .logo-footer {
@@ -50,8 +51,6 @@ footer .footer-social a {
                     background-image: url(../img/logo-footer@2x.png);
                 }
             }
-
-
         }
     }
 
@@ -62,7 +61,7 @@ footer .footer-social a {
         margin-bottom: 0;
 
         @include susy-breakpoint($medium-screen){
-            @include span(8 last);
+            @include span(4 last);
             border-left: 1px solid #fff;
             margin-top: 16px;
             margin-bottom: 16px;
@@ -70,7 +69,7 @@ footer .footer-social a {
 
         &__link {
             color: #FFF;
-            width: 33%;
+            width: 25%;
             display: block;
             float: left;
             text-align: center;
@@ -90,11 +89,16 @@ footer .footer-social a {
     }
 
     .copyright {
+
+        @include susy-breakpoint($medium-screen) {
+            @include span(12 last);
+        }
         text-align: center;
         font-weight: 300;
         font-size: 13px;
         color: #AAAAAA;
         line-height: 15px;
         padding: 15px 0;
+        background: #fff;
     }
 }

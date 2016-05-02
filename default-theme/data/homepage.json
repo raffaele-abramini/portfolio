@@ -131,11 +131,11 @@
         },
         {
           "title" : "Ruby + Rails",
-          "icon" : "fa-gear"
+          "icon" : "fa-diamond"
         },
         {
           "title" : "MySQL",
-          "icon" : "fa-gear"
+          "icon" : "fa-database"
         }
       ]
     },
@@ -168,6 +168,10 @@
       "title" : "Libraries, preprocessor and friends",
       "skills" : [
         {
+          "title" : "Git",
+          "icon" : "fa-code-fork"
+        },
+        {
           "title" : "Angular",
           "icon" : "fa-gear"
         },
@@ -197,6 +201,14 @@
         },
         {
           "title" : "Susy",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Semaphore",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Bitbucket",
           "icon" : "fa-gear"
         }
       ]
