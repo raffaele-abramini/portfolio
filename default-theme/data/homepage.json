@@ -1,0 +1,106 @@
+{
+  "portfolio" : [
+    {
+      "title": "British Study Centres",
+      "url": "british-study.com",
+      "tags": "Frontend Development, Responsive, PHP, jQuery, JSON Multilingual System",
+      "image": "/default-theme/img/portfolio/bsc.jpg"
+    },
+    {
+      "title": "Blog - British Study Centres",
+      "url": "british-study.com/blog",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/bsc_blog.jpg"
+    },
+    {
+      "title": "Corriere di Como",
+      "url": "corrieredicomo.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery, Custom Backend",
+      "image": "/default-theme/img/portfolio/cdc.jpg"
+    },
+    {
+      "title": "Valpoci",
+      "url": "valpoci.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/valpoci.jpg"
+    },
+    {
+      "title": "A Tutto Goal",
+      "url": "atuttogoal.it",
+      "tags": "Wordpress, Design, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/atuttogoal.jpg"
+    },
+    {
+      "title": "Exa Pumps",
+      "url": "exapumps.it",
+      "tags": "Wordpress, Design, Development, restricted areas, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/exa.jpg"
+    },
+    {
+      "title": "Folatti",
+      "url": "folatti.it",
+      "tags": "Wordpress, Development, Responsive, user custom contents, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/fola.jpg"
+    },
+    {
+      "title": "KPM Broaching",
+      "url": "kpmbroaching.com",
+      "tags": "Landing Page, Design, Development, Responsive, jQuery",
+      "image": "/default-theme/img/portfolio/kpm.jpg"
+    },
+    {
+      "title": "Dema Costruzioni",
+      "url": "dema-costruzioni.com",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/dema.jpg"
+    },
+    {
+      "title": "Tessile & Salute",
+      "url": "tessileesalute.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/tessile.jpg"
+    },
+    {
+      "title": "Immobiliare Morbegno",
+      "url": "immobiliaremorbegno.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/immob.jpg"
+    },
+    {
+      "title": "CP Technology",
+      "url": "cptechnology.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/cptech.jpg"
+    },
+    {
+      "title": "Latteria Valtellina",
+      "url": "latteriavaltellina.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/latteria.jpg"
+    },
+    {
+      "title": "Latteria Valtellina: Progetto Scuola",
+      "url": "scuola.latteriavaltellina.it",
+      "tags": "Wordpress, Development, Responsive, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/scuolalat.jpg"
+    },
+    {
+      "title": "Miele Dell'Orto",
+      "url": "mieledellorto.it",
+      "tags": "Wordpress, Development",
+      "image": "/default-theme/img/portfolio/miele.jpg"
+    },
+    {
+      "title": "BLP Costruzioni",
+      "url": "blpcostruzioni.com",
+      "tags": "Wordpress, Development, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/blp.jpg"
+    },
+    {
+      "title": "Okaypaper",
+      "url": "www.okaypaper.com",
+      "tags": "Wordpress, Development, PHP, jQuery",
+      "image": "/default-theme/img/portfolio/okaypap.jpg"
+    }
+  ]
+}

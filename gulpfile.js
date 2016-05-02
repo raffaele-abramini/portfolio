@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect-php'),
     browserSync = require('browser-sync'),
     variables = JSON.parse(fs.readFileSync('./variables.json')),
+    data = JSON.parse(fs.readFileSync(variables.themePath + variables.dataFolder + 'homepage.json')),
     secretPath = './secret.json',
     secret = null,
     existsSync = function(filePath){
@@ -139,16 +140,14 @@ gulp.task('images', function () {
  *  HTML
  */
 gulp.task('html', function () {
-    var templateData = {
-        },
-        options = {
+    var options = {
             batch : [variables.themePath + variables.partialsFolder + variables.includesFolder]
         };
 
     return gulp.src([
             variables.themePath + variables.partialsFolder + variables.layoutsFolder + '*.handlebars'
         ])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(data, options))
         .pipe(rename({
             extname: ".html"
         }))
@@ -171,7 +170,10 @@ gulp.task('connect', function() {
 gulp.task('watch', function() {
     gulp.watch([variables.themePath + variables.sassFolder + '**/*.scss'],['sass-main']);
     gulp.watch([variables.themePath + variables.jsFolder + 'modules/*.js'],['js-main']);
-    gulp.watch([variables.themePath + variables.partialsFolder + '**/*.handlebars'],['html']);
+    gulp.watch([
+        variables.themePath + variables.dataFolder + '*.json',
+        variables.themePath + variables.partialsFolder + '**/*.handlebars'
+    ],['html']);
 });
 
 
