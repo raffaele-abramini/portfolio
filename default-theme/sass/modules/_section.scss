@@ -5,9 +5,8 @@
     height: 100vh;
 
     @include susy-breakpoint(0 $medium-screen+-1){
-        height: auto !important;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        height: auto;
+        padding: 20px;
 
         .u-animated:not(.section--first .u-animated) {
             opacity: 1;

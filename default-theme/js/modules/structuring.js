@@ -131,6 +131,7 @@ var page = {
             else {$('#prev-section,#next-section').removeClass('disabled');}
         }
     },
+
     homeWaypoint : function(){
         // Waypoint
         $('.section').waypoint(function(direction) {
@@ -158,14 +159,14 @@ var page = {
             { e: $('.nav-toggle--open, .nav-actions__item'), p: 'transition.slideRightIn', o: { duration: 200, stagger:60 } }
         ],
         portfolio : [
-            { e: $('#portfolio').find('.portfolio__element'), p: 'transition.slideUpIn', o: { delay:0, duration: 100, stagger:70, drag: true, complete:function(){$('#portfolio').removeClass('js-animated');}}}
+            { e: $('#portfolio').find('.portfolio__element'), p: 'transition.slideUpIn', o: { delay:0, duration: 100, stagger:70, drag: true, begin:function(){$('#portfolio').removeClass('js-animated');}}}
         ],
         about : [
-            { e: $('#about').find('.u-animated'), p: 'transition.slideLeftIn', o: { delay:0, duration: 500, stagger:200, drag: true, complete:function(){$('#about').removeClass('js-animated');}}}
+            { e: $('#about').find('.u-animated'), p: 'transition.slideLeftIn', o: { delay:0, duration: 400, stagger:200, drag: true, begin:function(){$('#about').removeClass('js-animated');}}}
         ],
         skills : [
-            { e: $('#skills').find('.skills-group'), p: 'transition.expandIn', o: { delay:0, duration: 300, stagger:150, drag: true, complete:function(){$('#skills').removeClass('js-animated');}}}
-        ],
+            { e: $('#skills').find('.skills-group'), p: 'transition.expandIn', o: { delay:0, duration: 300, stagger:150, drag: true, begin:function(){$('#skills').removeClass('js-animated');}}}
+        ]
     }
 };
 
@@ -174,8 +175,8 @@ $(window).load(function(){
     $('body').css({opacity:1});
     page.init();
     $.Velocity.RunSequence(page.animations.intro);
-    if(window.outerWidth >= 768){
-        page.homeWaypoint();
+    page.homeWaypoint();
+    if(window.innerWidth >= 768){
         $('.portfolio__element').hoverdir();
     }
 });

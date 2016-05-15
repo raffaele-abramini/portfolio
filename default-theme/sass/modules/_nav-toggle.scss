@@ -4,11 +4,15 @@
         font-size: 22px;
     }
     &--open h3 {
-        font-size: 21px;
-        margin: 0px;
-        display: inline;
-        position: relative;
-        left: -10px;
+        display: none;
+
+        @include susy-breakpoint($medium-screen){
+            font-size: 21px;
+            margin: 0;
+            display: inline;
+            position: relative;
+            left: -10px;
+        }
     }
     &--open h3.white {
         color: #fff;

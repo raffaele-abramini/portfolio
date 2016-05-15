@@ -2,6 +2,8 @@
     @include display(flex);
     @include flex-direction(column);
     @include justify-content(center);
+    min-height: 100vh;
+    padding: 20px 0;
 
     &__subtitle {
         position: absolute;
