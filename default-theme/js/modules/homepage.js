@@ -1,3 +1,5 @@
+'use strict';
+
 var page = {
 
     data : {
@@ -6,20 +8,21 @@ var page = {
         openedSkill : false
     },
     init : function(){
+        var $body = $('body');
         $(window).scrollTop(0);
         if($('.section-nav').length > 0){
             page.data.sectionNav = true;
         }
 
         // Section navigation
-        $('body').on('click', '#prev-section', function(){
-            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$('body').hasClass('js-menu-opened')){
+        $body.on('click', '#prev-section', function(){
+            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$body.hasClass('js-menu-opened')){
                 $('.section-nav').addClass('false');
                 $(page.data.current).prev('.section').velocity("scroll", { duration: 700, easing: "easeOutCubic", complete: function(){$('.section-nav').removeClass('false');}});
             }
         });
-        $('body').on('click', '#next-section', function(){
-            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$('body').hasClass('js-menu-opened')){
+        $body.on('click', '#next-section', function(){
+            if(!$(this).hasClass('false') && !$(this).hasClass('disabled') && !$body.hasClass('js-menu-opened')){
                 $('.section-nav').addClass('false');
                 $(page.data.current).next('.section').velocity("scroll", { duration: 700, easing: "easeOutCubic", complete: function(){$('.section-nav').removeClass('false');}});
             }
@@ -42,11 +45,11 @@ var page = {
         });
 
         // Click listeners
-        $('body').on('click', '.js-portfolio__show-more', function(){
+        $body.on('click', '.js-portfolio__show-more', function(){
             page.increasePortfolioHeight($(this));
         });
 
-        $('body').on('click', '.skills-group__title', function(){
+        $body.on('click', '.skills-group__title', function(){
             page.openSkills($(this));
         });
 
@@ -57,10 +60,11 @@ var page = {
         open : function(){
             $('.u-fixed').each(function(){
                 var t = $(this);
-                t.css({position: 'absolute',top: t.offset().top});
+                alert(window.scrollY);
+                t.css({position: 'absolute',top: window.scrollY});
             });
             $('body').addClass('js-menu-opened');
-            $('.nav-toggle--close, #nav ul li').velocity('transition.slideRightIn', {duration:200, stagger:80});                       setTimeout(function(){$('.nav-toggle--open').addClass('js-menu-opened');}, 320);
+            $('.nav-toggle--close, .nav-main ul li').velocity('transition.slideRightIn', {duration:200, stagger:80});                       setTimeout(function(){$('.nav-toggle--open').addClass('js-menu-opened');}, 320);
         },
         close : function(complete){
             $('.u-fixed').each(function(){
@@ -120,10 +124,11 @@ var page = {
     },
 
     sectionReached : function(_this){
-        var t = _this.data('title');
-        var c = _this.data('color');
-        $('.nav-toggle--open').find('h3').remove();
-        $('.nav-toggle--open').prepend('<h3 class="'+c+'">'+t+'</h3>');
+        var t = _this.data('title'),
+            c = _this.data('color'),
+            $toggleOpen = $('.nav-toggle--open');
+        $toggleOpen.find('h3').remove();
+        $toggleOpen.prepend('<h3 class="'+c+'">'+t+'</h3>');
         page.data.current = '#'+_this.attr('id');
         if(page.data.sectionNav){
             if(_this.hasClass('first')){$('#prev-section').addClass('disabled');}
@@ -134,7 +139,8 @@ var page = {
 
     homeWaypoint : function(){
         // Waypoint
-        $('.section').waypoint(function(direction) {
+        var $section = $('.section');
+        $section.waypoint(function(direction) {
             var _this = $(this.element);
             if(direction == 'down'){
                 page.sectionReached(_this);
@@ -145,10 +151,9 @@ var page = {
                 if(_this.attr('id') == 'skills'){$.Velocity.RunSequence(page.animations.skills); }
             }
         }, {offset:'15%'});
-        $('.section').not('.u-fixed').waypoint(function(direction) {
+        $section.not('.u-fixed').waypoint(function(direction) {
             if(direction == 'up'){
                 page.sectionReached($(this.element));
-
             }
         }, {offset:'-90%'});
     },

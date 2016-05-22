@@ -23,6 +23,7 @@ footer .footer-social a {
 .footer-main {
     @include clearfix();
     background: #97BFB4;
+    padding-top: .1rem;
 
     > *:first-child {
 
@@ -36,7 +37,7 @@ footer .footer-social a {
             background-size: 100% 100%;
             width: 7.75em;
             height: 0.93em;
-            margin: 1.06em auto 0.68em;
+            margin: .86em auto 0.68em;
 
             @include susy-breakpoint($medium-screen){
                 margin-top: 2.5em;
@@ -59,6 +60,7 @@ footer .footer-social a {
         border-left: none;
         margin-top: 0;
         margin-bottom: 0;
+        @include clearfix();
 
         @include susy-breakpoint($medium-screen){
             @include span(4 last);
