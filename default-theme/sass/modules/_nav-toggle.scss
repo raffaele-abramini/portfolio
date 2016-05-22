@@ -1,17 +1,17 @@
 .nav-toggle {
     &--open i {
         color: #97bfb4;
-        font-size: 22px;
+        font-size: 1.375em;
     }
     &--open h3 {
         display: none;
 
         @include susy-breakpoint($medium-screen){
-            font-size: 21px;
+            font-size: 1.3em;
             margin: 0;
             display: inline;
             position: relative;
-            left: -10px;
+            left: -0.6em;
         }
     }
     &--open h3.white {
@@ -23,10 +23,10 @@
 
     &--open,
     &--close {
-        right: 10px;
+        right: 0.6em;
         position: fixed;
-        top: 10px;
-        font-size: 20px;
+        top: 0.6em;
+        font-size: 1.25em;
     }
 
     &--close {
