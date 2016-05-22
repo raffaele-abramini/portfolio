@@ -6,7 +6,7 @@
 
     @include susy-breakpoint(0 $medium-screen+-1){
         height: auto;
-        padding: 20px;
+        padding: 1.250rem;
 
         .u-animated:not(.section--first .u-animated) {
             opacity: 1;
@@ -15,12 +15,12 @@
 
     &__title {
         display: block;
-        padding: 10px 10px;
+        padding: 0.625rem 0.625rem;
         color: #333;
         text-transform: uppercase;
         letter-spacing: 5px;
-        font-size: 14px;
-        margin-bottom: 13px;
+        font-size: 0.875em;
+        margin-bottom: 0.813rem;
 
         @include susy-breakpoint($medium-screen){
             display: none;

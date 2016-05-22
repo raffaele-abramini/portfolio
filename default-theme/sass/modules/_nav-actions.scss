@@ -10,18 +10,18 @@
 
         @include susy-breakpoint($medium-screen) {
             position: fixed;
-            right: 10px;
+            right: 0.62rem;
             color: $action-color;
-            font-size: 32px;
-            line-height: 31px;
+            font-size: 2em;
+            line-height: 0.95;
         }
 
         &:first-child {
-            top: 50px;
+            top: 1.5em;
         }
 
         &:last-child {
-            top: 85px;
+            top: 2.5em;
         }
 
         &--disabled {

@@ -6,7 +6,7 @@
 
     .skills-group {
         text-align: center;
-        margin: 0 auto 12px;
+        margin: 0 auto .750rem;
 
         &__title {
             cursor: pointer;
@@ -14,8 +14,8 @@
 
             @include susy-breakpoint(0 $medium-screen+-1){
                 text-align: left;
-                padding-left: 10px;
-                font-size: 13px;
+                padding-left: .625em;
+                font-size: .813em;
                 border-bottom: 1px solid #f1f1f1;
                 margin-bottom: 0;
             }
@@ -43,7 +43,7 @@
             display: none;
 
             @include susy-breakpoint($medium-screen){
-                width: 200px;
+                width: 12.5rem;
                 margin: auto;
             }
         }
@@ -52,20 +52,20 @@
     .skill {
         float: left;
         opacity: 0;
-        height: 70px;
+        height: 4.375rem;
         width: 25%;
 
         @include susy-breakpoint($medium-screen){
             width: 20%;
-            height: 100px;
+            height: 6.25rem;
         }
 
         &__icon {
             font-family: 'FontAwesome';
             color: $action-color;
-            padding-top: 12px;
+            padding-top: .75rem;
             line-height: 25px;
-            font-size: 25px;
+            font-size: 1.563em;
 
             @include susy-breakpoint($medium-screen){
                 line-height: 53px;
@@ -77,13 +77,13 @@
             font-weight: 100;
             color: #000000;
             margin-top: 0;
-            margin-bottom: 0px;
-            padding-bottom: 7px;
-            font-size: 11px;
+            margin-bottom: 0;
+            padding-bottom: 0.438em;
+            font-size: 0.688em;
             line-height: 14px;
 
             @include susy-breakpoint($medium-screen){
-                font-size: 15px;
+                font-size: 0.938em;
                 line-height: 22px;
             }
         }
