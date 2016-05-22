@@ -4,6 +4,8 @@
     overflow-y: hidden;
     height: 100vh;
 
+    @include transition(height 0.3s);
+
     @include susy-breakpoint(0 $medium-screen+-1){
         height: auto;
         padding: 1.250rem;
@@ -11,6 +13,10 @@
         .u-animated:not(.section--first .u-animated) {
             opacity: 1;
         }
+    }
+
+    &--mobile-fullwidth {
+        @include padding(null 0);
     }
 
     &__title {
