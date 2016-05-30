@@ -1,0 +1,28 @@
+/**
+ * jQuery.Hoverdir
+ *
+ * Modified version of https://github.com/codrops/DirectionAwareHoverEffect
+ *
+ * Modifications:
+ * - Removed CSS3 transitions and Modernizr requirements.
+ * - Applied CSS classes for improved flexibility via CSS.
+ *
+ * @copyright  2015 WebMan - Oliver Juhas, www.webmandesign.eu
+ *
+ * @link  https://github.com/webmandesign/jquery.hoverdir
+ *
+ * @version  1.1.2
+ */
+
+/**
+ * jquery.hoverdir.js v1.1.2
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2012, Codrops
+ * http://www.codrops.com
+ */
+
+!function(a){"use strict";"function"==typeof define&&define.amd?define(["jquery"],a):"undefined"!=typeof exports?module.exports=a(require("jquery")):a(jQuery)}(function(a){"use strict";function b(b,c){this.$el=a(b),this.options=a.extend(!0,{},this.defaults,c),this.allClasses={from:this.options.fromPrefix+"top "+this.options.fromPrefix+"right "+this.options.fromPrefix+"bottom "+this.options.fromPrefix+"left",to:this.options.toPrefix+"top "+this.options.toPrefix+"right "+this.options.toPrefix+"bottom "+this.options.toPrefix+"left"},this._loadEvents()}b.prototype={defaults:{fromPrefix:"out-",toPrefix:"in-"},constructor:b,_loadEvents:function(){this.$el.on("mouseenter.hoverdir mouseleave.hoverdir",a.proxy(function(a){var b=this.options.fromPrefix,c=this.options.toPrefix,d=this._getDir({x:a.pageX,y:a.pageY}),e=this._getClass(d);"mouseenter"===a.type?this.$el.removeClass(this.allClasses.from).addClass(c+e).siblings().removeClass(this.allClasses.to):this.$el.removeClass(this.allClasses.to).addClass(b+e).siblings().removeClass(this.allClasses.from)},this))},_getDir:function(a){var b=this.$el.width(),c=this.$el.height(),d=(a.x-this.$el.offset().left-b/2)*(b>c?c/b:1),e=(a.y-this.$el.offset().top-c/2)*(c>b?b/c:1),f=Math.round((Math.atan2(e,d)*(180/Math.PI)+180)/90+3)%4;return f},_getClass:function(a){var b;switch(a){case 0:b="top";break;case 1:b="right";break;case 2:b="bottom";break;case 3:b="left"}return b},setOptions:function(b){this.options=a.extend(!0,{},this.defaults,this.options,b)},destroy:function(){this.$el.off("mouseenter.hoverdir mouseleave.hoverdir"),this.$el.data("hoverdir",null)},rebuild:function(a){"object"==typeof a&&this.setOptions(a),this._loadEvents()}},a.fn.hoverdir=function(c,d){return this.each(function(){var e=a(this).data("hoverdir"),f="object"==typeof c&&c;e||(e=new b(this,f),a(this).data("hoverdir",e)),"string"==typeof c&&(e[c](d),"destroy"===c&&a(this).data("hoverdir",!1))})},a.fn.hoverdir.Constructor=b});
