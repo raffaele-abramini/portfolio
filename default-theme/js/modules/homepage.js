@@ -58,9 +58,8 @@ var page = {
 
     menu : {
         open : function(){
-            $('.u-fixed').each(function(){
+            $('.nav-main').each(function(){
                 var t = $(this);
-                alert(window.scrollY);
                 t.css({position: 'absolute',top: window.scrollY});
             });
             $('body').addClass('js-menu-opened');

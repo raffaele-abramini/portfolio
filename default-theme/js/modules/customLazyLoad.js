@@ -2,9 +2,9 @@
 
 var OI = OI || {};
 
-OI.mobileHeight = (function () {
+OI.lazyLoad = (function () {
     'use strict';
-    var $targets = $('.section, .nav'),
+    var $ = $('.section, .nav'),
         windowwidth = window.innerWidth;
 
     $targets.css({ 'min-height' : window.innerHeight});
