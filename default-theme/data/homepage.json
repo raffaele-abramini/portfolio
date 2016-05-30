@@ -165,7 +165,7 @@
       ]
     },
     {
-      "title" : "Libraries, preprocessor and friends",
+      "title" : "Libraries and workflow",
       "skills" : [
         {
           "title" : "Angular",
@@ -189,6 +189,14 @@
         },
         {
           "title" : "Vagrant",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "NPM",
+          "icon" : "fa-gear"
+        },
+        {
+          "title" : "Bower",
           "icon" : "fa-gear"
         },
         {
