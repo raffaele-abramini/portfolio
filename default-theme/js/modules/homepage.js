@@ -4,15 +4,11 @@ var page = {
 
     data : {
         current : '#intro',
-        sectionNav : false,
         openedSkill : false
     },
     init : function(){
         var $body = $('body');
         $(window).scrollTop(0);
-        if($('.section-nav').length > 0){
-            page.data.sectionNav = true;
-        }
 
         // Section navigation
         $body.on('click', '#prev-section', function(){
@@ -29,7 +25,8 @@ var page = {
         });
 
         // Menu Control
-        $('.nav-toggle--open').click(function(){
+        $('.nav-toggle--open').click(function(a){
+            a.preventDefault();
             if($(this).hasClass('menu-opened')){
                 page.menu.close();
             } else {
@@ -58,20 +55,11 @@ var page = {
 
     menu : {
         open : function(){
-            $('.nav-main').each(function(){
-                var t = $(this);
-                t.css({position: 'absolute',top: window.scrollY});
-            });
             $('body').addClass('js-menu-opened');
             $('.nav-toggle--close, .nav-main ul li').velocity('transition.slideRightIn', {duration:200, stagger:80});                       setTimeout(function(){$('.nav-toggle--open').addClass('js-menu-opened');}, 320);
         },
         close : function(complete){
-            $('.u-fixed').each(function(){
-                var t = $(this);
-                $('body').removeClass('js-menu-opened');
-                setTimeout(function(){t.css({position: '',top: ''});
-                    if(complete){complete();}
-                }, 320);});
+            $('body').removeClass('js-menu-opened');
             $('.nav-toggle--open').removeClass('js-menu-opened');
         }
     },
@@ -129,11 +117,10 @@ var page = {
         $toggleOpen.find('h3').remove();
         $toggleOpen.prepend('<h3 class="'+c+'">'+t+'</h3>');
         page.data.current = '#'+_this.attr('id');
-        if(page.data.sectionNav){
-            if(_this.hasClass('first')){$('#prev-section').addClass('disabled');}
-            else if(_this.hasClass('last')){$('#next-section').addClass('disabled');}
-            else {$('#prev-section,#next-section').removeClass('disabled');}
-        }
+
+        if(_this.hasClass('section--first')){$('#prev-section').addClass('nav-actions__item--disabled');}
+        else if(_this.hasClass('section--last')){$('#next-section').addClass('nav-actions__item--disabled');}
+        else {$('#prev-section,#next-section').removeClass('nav-actions__item--disabled');}
     },
 
     homeWaypoint : function(){
