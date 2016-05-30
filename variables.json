@@ -8,14 +8,18 @@
   "partialsFolder" : "partials/",
   "layoutsFolder" : "layouts/",
   "includesFolder" : "includes/",
+  "dataFolder" : "data/",
   "jsVendorsPath" : [
-    "bower_components/jQuery/dist/jquery.min.js",
-    "bower_components/js-cookie/src/js.cookie.js"
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/js-cookie/src/js.cookie.js",
+    "node_modules/velocity-animate/velocity.js",
+    "node_modules/velocity-animate/velocity.ui.js",
+    "node_modules/waypoints/lib/jquery.waypoints.js",
+    "default-theme/js/lib/jquery.hoverdir.js"
   ],
   "cssVendorsPath" : [
 
   ],
   "assetsVendorsPath" : {
-    "bower_components/slick-carousel/slick/" : ["ajax-loader.gif", "fonts/*"]
   }
 }

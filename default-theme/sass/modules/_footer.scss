@@ -1,7 +1,7 @@
 footer .logo-footer {
-    width: 124px;
-    height: 15px;
-    margin: 17px auto 11px;
+    width: 7.75em;
+    height: .9em;
+    margin: 1em auto .68em;
 }
 footer .footer-social {
     border-left: none;
@@ -15,34 +15,36 @@ footer .footer-social a {
     display: block;
     float: left;
     text-align: center;
-    padding-bottom: 10px;
-    font-size: 16px;
+    padding-bottom: .62em;
+    font-size: 1em;
 }
 
 
 .footer-main {
     @include clearfix();
     background: #97BFB4;
+    padding-top: .1rem;
 
-    &:first-child {
-        @include susy-breakpoint($medium-screen){
-            @include span(4);
+    > *:first-child {
+
+        @include susy-breakpoint($medium-screen) {
+            @include span(8);
         }
 
         .logo-footer {
             background: url(../img/logo-footer@2x.png) no-repeat;
             -webkit-background-size: 100% 100%;
             background-size: 100% 100%;
-            width: 124px;
-            height: 15px;
-            margin: 17px auto 11px;
+            width: 7.75em;
+            height: 0.93em;
+            margin: .86em auto 0.68em;
 
             @include susy-breakpoint($medium-screen){
-                margin-top: 40px;
-                margin-bottom: 40px;
-                margin-left: 50px;
-                width: 248px;
-                height: 29px;
+                margin-top: 2.5em;
+                margin-bottom: 2.5em;
+                margin-left: 3.125em;
+                width: 15.5em;
+                height: 1.81em;
             }
             @media (-webkit-min-device-pixel-ratio: 2),
             (min-resolution: 192dpi) {
@@ -50,8 +52,6 @@ footer .footer-social a {
                     background-image: url(../img/logo-footer@2x.png);
                 }
             }
-
-
         }
     }
 
@@ -60,28 +60,29 @@ footer .footer-social a {
         border-left: none;
         margin-top: 0;
         margin-bottom: 0;
+        @include clearfix();
 
         @include susy-breakpoint($medium-screen){
-            @include span(8 last);
+            @include span(4 last);
             border-left: 1px solid #fff;
-            margin-top: 16px;
-            margin-bottom: 16px;
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
 
         &__link {
             color: #FFF;
-            width: 33%;
+            width: 25%;
             display: block;
             float: left;
             text-align: center;
-            padding-bottom: 10px;
-            font-size: 16px;
+            padding-bottom: .62em;
+            font-size: 1em;
 
 
             @include susy-breakpoint($medium-screen) {
                 display: inline-block;
-                padding: 24px 0 24px 50px;
-                font-size: 23px;
+                padding: 1.5rem 0 1.5rem 1.825rem;
+                font-size: 1.44em;
                 text-align: left;
                 width: auto;
                 float: none;
@@ -90,11 +91,16 @@ footer .footer-social a {
     }
 
     .copyright {
+
+        @include susy-breakpoint($medium-screen) {
+            @include span(12 last);
+        }
         text-align: center;
         font-weight: 300;
-        font-size: 13px;
+        font-size: .81em;
         color: #AAAAAA;
-        line-height: 15px;
-        padding: 15px 0;
+        line-height: .93em;
+        padding: .93em 0;
+        background: #fff;
     }
 }

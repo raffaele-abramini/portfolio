@@ -5,6 +5,9 @@
     top: 0;
     width: 100%;
     background: $secondary-background-color;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
     @include transform(translate3d(100%,0,0));
 
     @include susy-breakpoint($medium-screen){
@@ -21,13 +24,20 @@
             a {
                 color: #fff;
                 display: block;
-                padding: 7px 30px;
+                padding: .44rem 1.875rem;
                 text-transform: uppercase;
                 letter-spacing: 1.5px;
+                font-size: 1em;
                 @include transition(background 0.18s);
 
                 @include susy-breakpoint($medium-screen){
-                    padding: 13px 30px;
+                    padding: 0.813rem 1.875rem;
+                    font-size: 0.9em;
+                }
+
+
+                @include susy-breakpoint($large-screen){
+                    font-size: 1em;
                 }
 
                 &:hover {
@@ -41,13 +51,13 @@
 
     &__social {
         position: absolute;
-        bottom: 15px;
-        left: 25px;
+        bottom: 0.938rem;
+        left: 1.563rem;
 
         a {
             color: #fff;
-            font-size: 17px;
-            padding-right: 10px;
+            font-size: 1.063em;
+            padding-right: 0.625rem;
 
             &:hover {
                 color: rgba(#000, .8)

@@ -1,22 +1,521 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="/default-theme/css/screen.min.css">
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Old Irony - Raffaele Abramini</title>
+    <meta name="description" content="Raffaele Abramini's Web Portfolio: Web Development, Web Design.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<header class="header--main">
-    <nav><ul><li>asd</li></ul></nav>
-</header>
-<main>
-    <div class="main--inner">
-        <h1>Title</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem, dicta eos ipsam iste laboriosam libero, mollitia nihil obcaecati officia perspiciatis placeat possimus quam quasi quibusdam sed sit, voluptatibus. Dolores.</p>
+    <link rel="icon" type="image/png" href="/default-theme/img/favicon.png" />
+
+    <meta property="og:title" content="Old Irony - Raffaele Abramini">
+    <meta property="og:description" content="Raffaele Abramini's Web Portfolio: Web Development, Web Design.">
+    <meta property="og:image" content="http://oldirony.cc/default-theme/img/logo-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/default-theme/css/screen.css">
+
+    <script src="https://use.typekit.net/bzn0grm.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]--><nav>
+    <button class="u-fixed u-animated u-noselect nav-toggle nav-toggle--open">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="nav-actions">
+        <button id="prev-section" class="nav-actions__item nav-actions__item--disabled  u-fixed u-animated u-noselect"><i class="fa fa-angle-up"></i></button>
+        <button id="next-section" class="nav-actions__item  u-fixed u-animated u-noselect"><i class="fa fa-angle-down"></i></button>
+    </div>
+    <div class="nav-main u-fixed u-noselect">
+        <button class="nav-toggle nav-toggle--close">X</button>
+        <ul class="u-vertical-centered nav-main__list">
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills &amp; Knowledge</a></li>
+        </ul>
+        <div class="nav-main__social">
+            <a href="https://github.com/oldirony" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:raffaele.abramini@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://it.linkedin.com/in/raffaeleabramini" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/anyoldirony" target="_blank"><i class="fa fa-twitter"></i></a>
+        </div>
+    </div>
+</nav>
+<main id="home">
+    <header id="intro" class="section section--first intro" data-title="" data-color="gray">
+        <h1 class="logo u-animated u-vertical-centered">
+            <img src="/default-theme/img/logo@2x.png" alt="Old Irony Web Development" width="360" height="360">
+        </h1>
+        <h2 class="intro__subtitle u-animated u-noselect">Web Development</h2>
+    </header>
+    <div id="portfolio" class="section section--mobile-fullwidth portfolio js-animated" data-title="Portfolio" data-color="white">
+        <h4 class="section__title">Portfolio</h4>
+    
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/yourcarejob.jpg" alt="Yourcarejob preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Yourcarejob</h3>
+                    <span class="portfolio__element__url">yourcarejob.co.uk</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://yourcarejob.co.uk"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Silverstripe based website (back &amp; front end), Angular application for vetting and application</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/nfa.jpg" alt="NFA preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">NFA</h3>
+                    <span class="portfolio__element__url">nfa.co.uk</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://nfa.co.uk"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Silverstripe based website (back &amp; front end)</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/debenhams.jpg" alt="Debenhams Finance preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Debenhams Finance</h3>
+                    <span class="portfolio__element__url">finance.debenhams.com</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://finance.debenhams.com"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Frontend modifications, server-side customised scripts for email tracking</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/flowcountry.jpg" alt="The Flow Country preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">The Flow Country</h3>
+                    <span class="portfolio__element__url">theflowcountry.org.uk</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://theflowcountry.org.uk"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Silverstripe based website (back &amp; front end), custom Instagram import functions</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/racegoers.jpg" alt="The Racegoers Club preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">The Racegoers Club</h3>
+                    <span class="portfolio__element__url">racegoersclub.co.uk</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://racegoersclub.co.uk"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Custom e-commerce structure and Silverstripe website (back &amp; front end), Angular app for Shopping basket</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/nbc.jpg" alt="NBCU International preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">NBCU International</h3>
+                    <span class="portfolio__element__url">nbcuinternational.com/distribution-landing</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://nbcuinternational.com/distribution-landing"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">SVG interactive map, Frontend modifications</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/gbr.jpg" alt="GBR preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">GBR</h3>
+                    <span class="portfolio__element__url">greatbritishracing.com/horse-racing/racecards</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://greatbritishracing.com/horse-racing/racecards"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Angular app for racecards and results.</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/bsc.jpg" alt="British Study Centres preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">British Study Centres</h3>
+                    <span class="portfolio__element__url">british-study.com</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://british-study.com"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Frontend Development, Responsive, PHP, jQuery, JSON Multilingual System</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/bsc_blog.jpg" alt="Blog - British Study Centres preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Blog - British Study Centres</h3>
+                    <span class="portfolio__element__url">british-study.com/blog</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://british-study.com/blog"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/cdc.jpg" alt="Corriere di Como preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Corriere di Como</h3>
+                    <span class="portfolio__element__url">corrieredicomo.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://corrieredicomo.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery, Custom Backend</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/valpoci.jpg" alt="Valpoci preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Valpoci</h3>
+                    <span class="portfolio__element__url">valpoci.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://valpoci.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/atuttogoal.jpg" alt="A Tutto Goal preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">A Tutto Goal</h3>
+                    <span class="portfolio__element__url">atuttogoal.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://atuttogoal.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Design, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/exa.jpg" alt="Exa Pumps preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Exa Pumps</h3>
+                    <span class="portfolio__element__url">exapumps.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://exapumps.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Design, Development, restricted areas, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/fola.jpg" alt="Folatti preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Folatti</h3>
+                    <span class="portfolio__element__url">folatti.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://folatti.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, user custom contents, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/kpm.jpg" alt="KPM Broaching preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">KPM Broaching</h3>
+                    <span class="portfolio__element__url">kpmbroaching.com</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://kpmbroaching.com"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Landing Page, Design, Development, Responsive, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/dema.jpg" alt="Dema Costruzioni preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Dema Costruzioni</h3>
+                    <span class="portfolio__element__url">dema-costruzioni.com</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://dema-costruzioni.com"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/tessile.jpg" alt="Tessile &amp; Salute preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Tessile & Salute</h3>
+                    <span class="portfolio__element__url">tessileesalute.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://tessileesalute.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/immob.jpg" alt="Immobiliare Morbegno preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Immobiliare Morbegno</h3>
+                    <span class="portfolio__element__url">immobiliaremorbegno.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://immobiliaremorbegno.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/cptech.jpg" alt="CP Technology preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">CP Technology</h3>
+                    <span class="portfolio__element__url">cptechnology.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://cptechnology.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/latteria.jpg" alt="Latteria Valtellina preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Latteria Valtellina</h3>
+                    <span class="portfolio__element__url">latteriavaltellina.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://latteriavaltellina.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/scuolalat.jpg" alt="Latteria Valtellina: Progetto Scuola preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Latteria Valtellina: Progetto Scuola</h3>
+                    <span class="portfolio__element__url">scuola.latteriavaltellina.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://scuola.latteriavaltellina.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, Responsive, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/miele.jpg" alt="Miele Dell&#x27;Orto preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Miele Dell'Orto</h3>
+                    <span class="portfolio__element__url">mieledellorto.it</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://mieledellorto.it"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/blp.jpg" alt="BLP Costruzioni preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">BLP Costruzioni</h3>
+                    <span class="portfolio__element__url">blpcostruzioni.com</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://blpcostruzioni.com"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, PHP, jQuery</div>
+                </div>
+            </div>
+            <div class="portfolio__element u-animated">
+                <img class="js-lazy-load" data-lazy-src="/default-theme/img/portfolio/okaypap.jpg" alt="Okaypaper preview" src="/default-theme/img/portfolio-placeholder.jpg">
+                <div class="portfolio__element__inner hover-dir">
+                    <h3 class="portfolio__element__title">Okaypaper</h3>
+                    <span class="portfolio__element__url">www.okaypaper.com</span>
+                    <a class="portfolio__element__link" target="_blank" href="http://www.okaypaper.com"><i class="fa fa-link"></i></a>
+                    <div class="portfolio__element__details">Wordpress, Development, PHP, jQuery</div>
+                </div>
+            </div>
+    
+        <button class="portfolio__show-more js-portfolio__show-more">Show more <i class="fa fa-plus"></i></button>
+    </div>    <div id="about" class="section js-animated about" data-title="about me" data-color="black">
+        <div class="about__copy">
+            <div class="u-vertical-centered">
+                <h2 class="u-animated">Hi! I am Raffaele</h2>
+                <p class="u-animated">I'm a 25 years old Italian <span class="u-highlight">web developer</span> and I love coding and building websites and web apps. I earned a Bachelor’s degree in Communication Design at Polytechnic University of Milan in 2012. For two years I worked in a communication agency. I have knowledge of web languages such as html, css, javascript, PHP, SQL and techniques such as SEO, mobile optimization, UI &amp; UX improvement.</p>
+                <p class="u-animated">Bored by the static Italian environment, I decided to move to London in September 2014 where I have been hired as a Front-End Developer by a prestigious School of English. I coded the website for this school and a web app for the online tests.</p>
+                <p class="u-animated">Since May 2015 I've been working as frontend and backend developer for
+                    <a href="http://steellondon.com/" title="STEEL London agency website" target="_blank">STEEL London</a>, growing my knowledge of new technologies and techniques as well as team working and agile workflow. I created websites based on the Silverstripe Framework, realised several Angular applications and managed remote servers via ssh.</p>
+                <p class="u-animated">You can find the source code of my portfolio on <a href="https://github.com/oldirony/portfolio" target="_blank">Github</a>.</p>
+            </div>
+        </div>
+        <div class="about__wallpaper"></div>
+    </div>    <div id="skills" class="skills section section--mobile-fullwidth js-animated section--last" data-title="skills &amp; knowledge" data-color="gray">
+        <div class="skills__inner u-vertical-centered">
+            <h4 class="section__title u-animated">Skills, Knowledge &amp; Services</h4>
+    
+                <div class="skills-group u-animated">
+                    <h3 class="skills-group__title">Languages</h3>
+                    <div class="skills-group__wrap">
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">javascript</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">SASS</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-html5"></i>
+                            <h4 class="skill__title">HTML 5</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">PHP</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-terminal"></i>
+                            <h4 class="skill__title">SHELL</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-diamond"></i>
+                            <h4 class="skill__title">Ruby + Rails</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-database"></i>
+                            <h4 class="skill__title">MySQL</h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="skills-group u-animated">
+                    <h3 class="skills-group__title">CMS</h3>
+                    <div class="skills-group__wrap">
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Silverstripe</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-wordpress"></i>
+                            <h4 class="skill__title">Wordpress</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-joomla"></i>
+                            <h4 class="skill__title">Joomla</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-drupal"></i>
+                            <h4 class="skill__title">Drupal</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-shopping-cart"></i>
+                            <h4 class="skill__title">Opencart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="skills-group u-animated">
+                    <h3 class="skills-group__title">Libraries and workflow</h3>
+                    <div class="skills-group__wrap">
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Angular</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Gulp</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Grunt</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-code-fork"></i>
+                            <h4 class="skill__title">Git</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Docker</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Vagrant</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">NPM</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Bower</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">jQuery</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Bourbon</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Susy</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Semaphore</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Bitbucket</h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="skills-group u-animated">
+                    <h3 class="skills-group__title">Software</h3>
+                    <div class="skills-group__wrap">
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">PhpStorm</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Sublime Text</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">RubyMine</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Sketch</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Inkscape</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Photoshop</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Illustrator</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">inDesign</h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="skills-group u-animated">
+                    <h3 class="skills-group__title">Misc</h3>
+                    <div class="skills-group__wrap">
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Object-oriented programming</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Responsive Websites</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">SEO</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">IE Optimisation</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Google Tag Manager</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Google Analytics</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">Campaign Monitor</h4>
+                        </div>
+                        <div class="skill">
+                            <i class="skill__icon fa fa-gear"></i>
+                            <h4 class="skill__title">G+, FB, Twitter &amp; Social API</h4>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+    
+        </div>
     </div>
 </main>
-<footer class="footer--main"></footer>
-<script src="/default-theme/js/main.js"></script>
+
+<footer class="footer-main">
+    <div>
+        <div class="logo-footer"></div>
+    </div>
+    <div class="footer-social">
+        <a class="footer-social__link" href="https://github.com/oldirony" target="_blank"><i class="fa fa-github"></i></a>
+        <a class="footer-social__link" href="mailto:raffaele.abramini@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        <a class="footer-social__link" href="https://it.linkedin.com/in/raffaeleabramini" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a class="footer-social__link" href="https://twitter.com/anyoldirony" target="_blank"><i class="fa fa-twitter"></i></a>
+    </div>
+
+    <div class="copyright">
+        All rights reserved - &copy; 2016 - Oldirony.cc <br><br>
+        Portfolio source code on <a href="https://github.com/oldirony/portfolio" target="_blank">Github</a>.
+    </div>
+</footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="/default-theme/js/vendors.min.js"></script>
+<script src="/default-theme/js/main.min.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-40778741-7', 'auto');ga('send', 'pageview');
+</script>
+
 </body>
 </html>

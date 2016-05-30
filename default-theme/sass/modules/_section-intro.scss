@@ -1,8 +1,14 @@
 .intro {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    min-height: 100vh;
+    padding: 1.250rem 0;
+
     &__subtitle {
         position: absolute;
         width: 100%;
         text-align: center;
-        bottom: 50px;
+        bottom: 3.125rem;
     }
 }

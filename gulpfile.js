@@ -11,7 +11,10 @@ var gulp = require('gulp'),
     copy = require('gulp-copy'),
     tinypng = require('gulp-tinypng-compress'),
     handlebars = require('gulp-compile-handlebars'),
+    connect = require('gulp-connect-php'),
+    browserSync = require('browser-sync'),
     variables = JSON.parse(fs.readFileSync('./variables.json')),
+    data = JSON.parse(fs.readFileSync(variables.themePath + variables.dataFolder + 'homepage.json')),
     secretPath = './secret.json',
     secret = null,
     existsSync = function(filePath){
@@ -137,20 +140,27 @@ gulp.task('images', function () {
  *  HTML
  */
 gulp.task('html', function () {
-    var templateData = {
-        },
-        options = {
+    var options = {
             batch : [variables.themePath + variables.partialsFolder + variables.includesFolder]
         };
 
     return gulp.src([
             variables.themePath + variables.partialsFolder + variables.layoutsFolder + '*.handlebars'
         ])
-        .pipe(handlebars(templateData, options))
+        .pipe(handlebars(data, options))
         .pipe(rename({
             extname: ".html"
         }))
         .pipe(gulp.dest('./'));
+});
+
+gulp.task('connect', function() {
+    connect.server({}, function (){
+        browserSync({
+            proxy: '127.0.0.1:8000'
+        });
+    });
+
 });
 
 
@@ -160,14 +170,17 @@ gulp.task('html', function () {
 gulp.task('watch', function() {
     gulp.watch([variables.themePath + variables.sassFolder + '**/*.scss'],['sass-main']);
     gulp.watch([variables.themePath + variables.jsFolder + 'modules/*.js'],['js-main']);
-    gulp.watch([variables.themePath + variables.partialsFolder + '**/*.handlebars'],['html']);
+    gulp.watch([
+        variables.themePath + variables.dataFolder + '*.json',
+        variables.themePath + variables.partialsFolder + '**/*.handlebars'
+    ],['html']);
 });
 
 
 /**
  *  Callable Task
  */
-gulp.task('deploy', ['vendors', 'sass-main', 'js-main', 'images']);
+gulp.task('deploy', ['vendors', 'sass-main', 'js-main', 'html']);
 
 // Gulp deploy and watch called via shell to keep the sequence
 gulp.task('default', shell.task([
