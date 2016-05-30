@@ -61,6 +61,11 @@ var page = {
         close : function(complete){
             $('body').removeClass('js-menu-opened');
             $('.nav-toggle--open').removeClass('js-menu-opened');
+
+
+            setTimeout(function(){
+                if(complete){complete();}
+            }, 320);
         }
     },
     scrollTo : function(t){
