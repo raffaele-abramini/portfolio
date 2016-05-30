@@ -4,17 +4,12 @@ var OI = OI || {};
 
 OI.lazyLoad = (function () {
     'use strict';
-    var $ = $('.section, .nav'),
-        windowwidth = window.innerWidth;
+    var $lazyImage = $('.js-lazy-load');
 
-    $targets.css({ 'min-height' : window.innerHeight});
-
-
-    $(window).resize(function(){
-        if(windowwidth != window.innerWidth && windowwidth < 768){
-            windowwidth = window.innerWidth;
-            $targets.css({ 'min-height' : window.innerHeight});
-        }
-    })
-
+    $(window).load(function(){
+        $lazyImage.each(function(){
+            var $this = $(this);
+            $this.attr('src', $this.data('lazy-src'));
+        });
+    });
 })();

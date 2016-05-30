@@ -3,7 +3,7 @@
 
     {{#portfolio}}
         <div class="portfolio__element u-animated">
-            <img src="{{image}}" alt="{{title}} preview">
+            <img class="js-lazy-load" data-lazy-src="{{image}}" alt="{{title}} preview" src="/default-theme/img/portfolio-placeholder.jpg">
             <div class="portfolio__element__inner hover-dir">
                 <h3 class="portfolio__element__title">{{{title}}}</h3>
                 <span class="portfolio__element__url">{{url}}</span>
