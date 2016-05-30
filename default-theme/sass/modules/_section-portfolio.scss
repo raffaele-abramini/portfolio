@@ -156,16 +156,15 @@
             width: 100%;
             position: absolute;
             bottom: 0;
-            height: 3.438rem;
             background: rgba(255, 255, 255, .95);
             left: 0;
             display: block;
-            @include transition(all .3s);
+            padding: 1rem 0;
+            @include transition(padding .3s);
 
             &:hover {
-                height: 5rem;
-                padding-top: 3.125rem;
-                padding-bottom: 1.250rem;
+                padding-top: 2.525rem;
+                padding-bottom: 1.750rem;
             }
         }
     }
