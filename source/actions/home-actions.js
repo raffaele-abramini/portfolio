@@ -1,6 +1,6 @@
 import { SWITCH_SECTION } from './types';
 
-export function switchSection(payload) {
+export function switchSectionTo(payload) {
 	return {
 		type: SWITCH_SECTION,
 		payload

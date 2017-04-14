@@ -14,7 +14,7 @@ module.exports = {
 				exclude: /node_modules/,
 				loader : 'babel-loader',
 				options: {
-					presets : ['latest', 'react']
+					presets : ['stage-3', 'react']
 				}
 			},
 			{
