@@ -1,0 +1,1 @@
+export const SWITCH_SECTION = 'SWITCH_HOME_SECTION';

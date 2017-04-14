@@ -1,7 +1,11 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+
 module.exports = {
 	entry: './source/client.js',
 	output: {
-		filename: './dist/bundle.js'
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
 		rules: [
@@ -12,7 +16,16 @@ module.exports = {
 				options: {
 					presets : ['latest', 'react']
 				}
+			},
+			{
+				test:/\.scss$/,
+				use: ExtractTextPlugin.extract({
+					use: ['css-loader', 'sass-loader']
+				})
 			}
 		]
-	}
+	},
+	plugins : [
+		new ExtractTextPlugin('style.css')
+	]
 };

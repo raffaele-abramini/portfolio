@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
+import style from'./styles/style.scss';
 
 
 const history = createBrowserHistory();
