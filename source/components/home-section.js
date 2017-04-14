@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
+import scrollTo from '../lib/scroll';
 
-const HomeSection = ({children, name, isActive})=>{
-    return <section className="c-homepage-section o-full-height-section">
-		<h1>{name} {isActive && ' is active'}</h1>
-		{children}
-	</section>
-};
+class PageNav extends Component {
 
-export default HomeSection;
+	componentWillUpdate(newProps){
+		if(newProps.isActive)	{
+			scrollTo(this.elem.offsetTop, 300)
+		}
+	}
+
+    render(){
+    	const {children, name, isActive} = this.props;
+
+        return (
+			<section ref={elem => this.elem = elem} className="c-homepage-section o-full-height-section">
+				<h1>{name} {isActive && ' is active'}</h1>
+				{children}
+			</section>
+		)
+    }
+}
+
+export default PageNav
