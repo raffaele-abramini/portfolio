@@ -73,7 +73,7 @@ class PageNav extends Component {
 			<a className="c-page-nav__nav-item"
 			   href={`#${section}`}
 			   key={section}
-			   onClick={()=>this.handleNavClick(section)}>
+			   onClick={event=>this.handleNavClick(section, event)}>
 				{section}
 			</a>
 		));

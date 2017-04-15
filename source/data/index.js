@@ -5,6 +5,17 @@ export default {
 		about :'about',
 		skills :'skills'
 	},
+	projects : [
+		{
+			title: "Suzuki cars"
+		},
+		{
+			title: "Suzuki bikes"
+		},
+		{
+			title: "Suzuki marine"
+		}
+	],
 	social : [
 		{
 			link : 'https://github.com/oldirony',

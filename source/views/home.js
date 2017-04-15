@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../containers/home-section-container';
 import PageNav from '../containers/page-nav-container';
 import Intro from '../components/home-intro';
-import Portfolio from '../components/home-portfolio';
+import Portfolio from '../containers/portfolio-container';
 import About from '../components/home-about';
 import Skills from '../components/home-skills';
 import data from '../data';
