@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import data from '../data';
 import classnames from 'classnames';
 
 import SocialNav from './social-nav';
@@ -20,6 +19,8 @@ class PageNav extends Component {
 							<use xlinkHref="#nav" />
 						</svg>
 					</button>
+
+					{this.renderArrows()}
 				</div>
 				<aside className="c-page-nav__aside">
 					<button className="c-page-nav__toggle-inner c-button--no-style"
@@ -37,8 +38,36 @@ class PageNav extends Component {
 		)
     }
 
+    renderArrows(){
+    	const arrowClasses = (isPrev, isDisabled)=> classnames({
+			'c-page-nav__arrow' : true,
+			'c-button--no-style' : true,
+			'c-page-nav__arrow-prev' : isPrev,
+			'c-page-nav__arrow-next' : !isPrev,
+			'disabled' : isDisabled
+		});
+
+
+    	return (
+			<div className="c-page-nav__arrows">
+				<button className={arrowClasses(true)}
+						onClick={()=>this.prevArrowClick()}>
+					<svg className="c-icon">
+						<use xlinkHref="#chevron-up" />
+					</svg>
+				</button>
+				<button className={arrowClasses()}
+						onClick={()=>this.nextArrowClick()}>
+					<svg className="c-icon">
+						<use xlinkHref="#chevron-down" />
+					</svg>
+				</button>
+			</div>
+		)
+	}
+
 	renderItems(){
-		return Object.values(data.homeSections).map(section => (
+		return Object.values(this.props.homeSections).map(section => (
 			<a className="c-page-nav__nav-item"
 			   href={`#${section}`}
 			   key={section}
@@ -63,6 +92,33 @@ class PageNav extends Component {
 	handleToggleClick(){
 		this.props.toggleNav(!this.props.isNavOpen);
 	}
+
+
+	// TODO refactor these next functions
+
+	prevArrowClick () {
+		const currentIndex = this.getCurrentSectionIndex();
+		if(currentIndex - 1 < 0) return;
+
+		this.moveSectionTo(currentIndex-1)
+	}
+
+	nextArrowClick () {
+		const currentIndex = this.getCurrentSectionIndex();
+
+		if(currentIndex + 1 > Object.values(this.props.homeSections).length) return;
+
+		this.moveSectionTo(currentIndex+1)
+	}
+
+	getCurrentSectionIndex(){
+		return Object.values(this.props.homeSections).indexOf(this.props.activeSection);
+	}
+
+	moveSectionTo(number){
+		this.props.switchSectionTo(this.props.homeSections[Object.keys(this.props.homeSections)[number]]);
+	}
+
 }
 
 export default PageNav

@@ -4,10 +4,11 @@ import PageNav from '../components/page-nav';
 import {switchSectionTo, toggleNav} from '../actions/home-actions';
 
 function mapStateToProps(state){
-	const {activeSection, isNavOpen} = state.home;
+	const {activeSection, isNavOpen, sections} = state.home;
 	return {
 		activeSection,
-		isNavOpen
+		isNavOpen,
+		homeSections : sections
 	}
 }
 

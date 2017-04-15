@@ -19,6 +19,7 @@
 		z-index:10;
 		transform: translate3d(-100%,0,0);
 		padding: 1rem;
+		text-align: center;
 	}
 
 	&__toggle {
@@ -28,6 +29,21 @@
 
 		&:hover {
 			color: rgba(black, .5);
+		}
+	}
+
+	&__arrows {
+		margin-top: 1rem;
+	}
+
+	&__arrow {
+		display: block;
+		font-size: 1.5rem;
+		color: $color-alpha;
+		padding: 0 .5rem;
+
+		&.is-disabled {
+			color: rgba(black, .4);
 		}
 	}
 
