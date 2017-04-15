@@ -5,8 +5,7 @@ import PortfolioItem from './portfolio-item';
 
 
 const Intro = ({projects})=>{
-    return <div>
-		<h1>PORTFOLIO!</h1>
+    return <div className="c-portfolio-grid">
 		{projects.map((project, index)=><PortfolioItem key={index} {...project}/>)}
 	</div>
 };

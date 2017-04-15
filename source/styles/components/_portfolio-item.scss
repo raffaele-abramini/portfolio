@@ -1,0 +1,31 @@
+.c-portfolio-item {
+	$scope: &;
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		#{$scope}__inner {
+			transform: translate3d(0%,0%,0);
+		}
+	}
+
+	&__inner {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: ' ';
+		background: rgba($color-alpha, .9);
+		top: 0;
+		left: 0;
+		transform: translate3d(0%,100%,0);
+		transition: transform .2s;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
