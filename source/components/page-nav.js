@@ -39,25 +39,27 @@ class PageNav extends Component {
     }
 
     renderArrows(){
-    	const arrowClasses = (isPrev, isDisabled)=> classnames({
+    	const currentIndex = this.getCurrentSectionIndex();
+    	const arrowClasses = (isPrev)=> classnames({
 			'c-page-nav__arrow' : true,
 			'c-button--no-style' : true,
 			'c-page-nav__arrow-prev' : isPrev,
 			'c-page-nav__arrow-next' : !isPrev,
-			'disabled' : isDisabled
+			'is-disabled' : isPrev && currentIndex === 0
+							|| !isPrev && currentIndex === (Object.values(this.props.homeSections).length -1)
 		});
 
 
     	return (
 			<div className="c-page-nav__arrows">
 				<button className={arrowClasses(true)}
-						onClick={()=>this.prevArrowClick()}>
+						onClick={()=>this.arrowClick(true)}>
 					<svg className="c-icon">
 						<use xlinkHref="#chevron-up" />
 					</svg>
 				</button>
 				<button className={arrowClasses()}
-						onClick={()=>this.nextArrowClick()}>
+						onClick={()=>this.arrowClick()}>
 					<svg className="c-icon">
 						<use xlinkHref="#chevron-down" />
 					</svg>
@@ -93,22 +95,20 @@ class PageNav extends Component {
 		this.props.toggleNav(!this.props.isNavOpen);
 	}
 
-
-	// TODO refactor these next functions
-
-	prevArrowClick () {
+	arrowClick(isPrev){
 		const currentIndex = this.getCurrentSectionIndex();
-		if(currentIndex - 1 < 0) return;
+		let change = 0;
 
-		this.moveSectionTo(currentIndex-1)
-	}
+		if(isPrev) {
+			change--;
+			if(currentIndex + change < 0) return;
+		} else {
+			change++;
+			if(currentIndex + change >= Object.values(this.props.homeSections).length) return;
+		}
 
-	nextArrowClick () {
-		const currentIndex = this.getCurrentSectionIndex();
+		this.moveSectionTo(currentIndex+change);
 
-		if(currentIndex + 1 > Object.values(this.props.homeSections).length) return;
-
-		this.moveSectionTo(currentIndex+1)
 	}
 
 	getCurrentSectionIndex(){
