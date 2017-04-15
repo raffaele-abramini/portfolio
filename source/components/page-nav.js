@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import data from '../data';
 import classnames from 'classnames';
 
+import SocialNav from './social-nav';
+
 class PageNav extends Component {
     render(){
     	const navClasses = classnames({
@@ -9,16 +11,28 @@ class PageNav extends Component {
 			"is-open" : this.props.isNavOpen
 		});
 
-        return <section className={navClasses}>
-			<div className="c-page-nav__on-page">
-				<button className="c-page-nav__toggle" onClick={()=>this.handleToggleClick()}>toggle nav</button>
-			</div>
-			<aside className="c-page-nav__aside">
-				<nav className="c-page-nav__nav">
-					{this.renderItems()}
-				</nav>
-			</aside>
-		</section>
+        return (
+			<section className={navClasses}>
+				<div className="c-page-nav__on-page">
+					<button className="c-page-nav__toggle c-button--no-style"
+							onClick={()=>this.handleToggleClick()}>
+						toggle nav
+					</button>
+				</div>
+				<aside className="c-page-nav__aside">
+					<button className="c-page-nav__toggle-inner c-button--no-style"
+							onClick={()=>this.handleToggleClick()}>
+						X
+					</button>
+
+					<nav className="c-page-nav__nav">
+						{this.renderItems()}
+					</nav>
+
+					<SocialNav />
+				</aside>
+			</section>
+		)
     }
 
 	renderItems(){

@@ -8,6 +8,11 @@
 	transform: translate3d(100%,0,0);
 	transition: transform .2s;
 
+	&.is-open {
+		transform: translate3d(0,0,0);
+	}
+
+	// on page ---
 	&__on-page {
 		position: absolute;
 		left: 0;
@@ -15,12 +20,24 @@
 		transform: translate3d(-100%,0,0);
 		padding: 1rem;
 	}
-	
+
+	&__toggle {
+
+	}
+
+	// aside ---
 	&__aside {
 		height: 100vh;
 		background: $color-alpha;
 		display: flex;
 		flex-direction: column;
+	}
+
+	&__toggle-inner {
+		padding: 1rem;
+		align-self: flex-end;
+		color: #fff;
+		font-size: 1.2rem;
 	}
 
 	&__nav {
@@ -33,10 +50,14 @@
 		color: #fff;
 		align-self: flex-start;
 		text-decoration: none;
-		padding:.5rem;
-	}
+		padding:.75rem 1rem;
+		text-transform: uppercase;
+		font-size: .9rem;
+		letter-spacing: 1.5px;
+		transition: background .2s;
 
-	&.is-open {
-		transform: translate3d(0,0,0);
+		&:hover {
+			background: rgba(black, .2);
+		}
 	}
 }
