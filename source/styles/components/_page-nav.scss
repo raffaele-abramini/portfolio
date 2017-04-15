@@ -22,7 +22,13 @@
 	}
 
 	&__toggle {
+		font-size: 1.2rem;
+		color: $color-alpha;
+		transition: color .2s;
 
+		&:hover {
+			color: rgba(black, .5);
+		}
 	}
 
 	// aside ---
@@ -37,7 +43,12 @@
 		padding: 1rem;
 		align-self: flex-end;
 		color: #fff;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
+		transition: color .2s;
+
+		&:hover {
+			color: rgba(black, .5);
+		}
 	}
 
 	&__nav {
@@ -59,5 +70,9 @@
 		&:hover {
 			background: rgba(black, .2);
 		}
+	}
+
+	&__social-nav {
+		padding: 1rem;
 	}
 }

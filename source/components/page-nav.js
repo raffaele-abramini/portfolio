@@ -16,7 +16,9 @@ class PageNav extends Component {
 				<div className="c-page-nav__on-page">
 					<button className="c-page-nav__toggle c-button--no-style"
 							onClick={()=>this.handleToggleClick()}>
-						toggle nav
+						<svg className="c-icon">
+							<use xlinkHref="#nav" />
+						</svg>
 					</button>
 				</div>
 				<aside className="c-page-nav__aside">

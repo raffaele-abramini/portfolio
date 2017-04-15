@@ -2,11 +2,13 @@ import React from 'react';
 import data from '../data';
 
 const SocialNav = ({})=>{
-	const renderLinks = data.social.map(social=>(
+	const renderLinks = data.social.map(({link, type})=>(
 		<a className="c-social-nav__item"
-			href={social.link}>
+			href={link}
+		    key={type}
+			target="_blank">
 			<svg className="c-icon">
-				<use xlinkHref={`#${social.type}`} />
+				<use xlinkHref={`#${type}`} />
 			</svg>
 		</a>
 	));
