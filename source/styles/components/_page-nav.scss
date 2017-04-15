@@ -1,9 +1,42 @@
 .c-page-nav {
 	position: fixed;
 	top: 0;
-	left: 50%;
 	right: 0;
 	background: #fff;
-	padding: 1rem;
 	z-index: 2;
+	width: 15rem;
+	transform: translate3d(100%,0,0);
+	transition: transform .2s;
+
+	&__on-page {
+		position: absolute;
+		left: 0;
+		z-index:10;
+		transform: translate3d(-100%,0,0);
+		padding: 1rem;
+	}
+	
+	&__aside {
+		height: 100vh;
+		background: $color-alpha;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__nav {
+		margin: auto;
+		width: 100%;
+	}
+
+	&__nav-item {
+		display: block;
+		color: #fff;
+		align-self: flex-start;
+		text-decoration: none;
+		padding:.5rem;
+	}
+
+	&.is-open {
+		transform: translate3d(0,0,0);
+	}
 }

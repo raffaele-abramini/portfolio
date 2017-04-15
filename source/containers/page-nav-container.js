@@ -1,12 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PageNav from '../components/page-nav';
-import {switchSectionTo} from '../actions/home-actions';
+import {switchSectionTo, toggleNav} from '../actions/home-actions';
 
-function mapStateToProps(state, {name}){
+function mapStateToProps(state){
+	const {activeSection, isNavOpen} = state.home;
 	return {
-		isActive : state.home.activeSection === name,
+		activeSection,
+		isNavOpen
 	}
 }
 
-export default connect(mapStateToProps, {switchSectionTo})(PageNav);
+export default connect(mapStateToProps, {switchSectionTo, toggleNav})(PageNav);

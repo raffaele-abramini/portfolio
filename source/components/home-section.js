@@ -14,7 +14,6 @@ class PageNav extends Component {
 
         return (
 			<section ref={elem => this.elem = elem} className="c-homepage-section o-full-height-section">
-				<h1>{name} {isActive && ' is active'}</h1>
 				{children}
 			</section>
 		)

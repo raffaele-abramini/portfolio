@@ -1,1 +1,4 @@
 export const SWITCH_SECTION = 'SWITCH_HOME_SECTION';
+
+export const TOGGLE_NAV = 'TOGGLE_HOME_NAV';
+

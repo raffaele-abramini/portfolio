@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/oldirony/portfolio#readme",
   "dependencies": {
+    "classnames": "^2.2.5",
     "express": "^4.15.2",
     "history": "^4.6.1",
     "react": "^15.5.4",
