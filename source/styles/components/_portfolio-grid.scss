@@ -1,8 +1,37 @@
 .c-portfolio-grid {
+	$scope: &;
+
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 25vw 25vw 25vw 25vw;
 	grid-column-gap: 1px;
 	grid-row-gap: 1px;
 	width: 100%;
+
+	position: relative;
+	overflow: hidden;
+	max-height: 100vh;
+	margin: auto;
+	transition: max-height .3s;
+
+	&.is-extended {
+		max-height: 200vh;
+
+
+		#{$scope}__extend {
+			display: none;
+		}
+	}
+	
+	&__extend {
+		border: none;
+		border-radius:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background: rgba(white, .8);
+		width: 100%;
+		padding: 1rem;
+	}
 }

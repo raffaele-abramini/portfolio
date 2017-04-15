@@ -1,11 +1,12 @@
 import data from '../data';
-import { SWITCH_SECTION, TOGGLE_NAV } from '../actions/types';
+import { SWITCH_SECTION, TOGGLE_NAV, EXTEND_PORTFOLIO_SECTION } from '../actions/types';
 
 
 const initialState = {
 	sections: data.homeSections,
 	activeSection: data.homeSections.intro,
-	isNavOpen: false
+	isNavOpen: false,
+	isPortfolioExtended: false
 };
 
 
@@ -15,6 +16,8 @@ export default (state = initialState, {type, payload})=>{
 			return {...state, activeSection :payload};
 		case TOGGLE_NAV:
 			return {...state, isNavOpen :payload};
+		case EXTEND_PORTFOLIO_SECTION:
+			return {...state, isPortfolioExtended :true};
 	}
 	return state;
 }
