@@ -114,5 +114,41 @@ export default {
 			link : 'https://twitter.com/anyoldirony',
 			type: 'twitter'
 		},
+	],
+	skillCategories: [
+		{
+			name: 'languages',
+			skills: [
+				{
+					name: 'Javascript',
+					icon: 'cog'
+				},
+				{
+					name: 'Javascript',
+					icon: 'cog'
+				},
+				{
+					name: 'Javascript',
+					icon: 'cog'
+				}
+			]
+		},
+		{
+			name: 'languages',
+			skills: [
+				{
+					name: 'Javascript',
+					icon: 'cog'
+				},
+				{
+					name: 'Javascript',
+					icon: 'cog'
+				},
+				{
+					name: 'Javascript',
+					icon: 'cog'
+				}
+			]
+		}
 	]
 };

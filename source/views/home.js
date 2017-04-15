@@ -34,7 +34,7 @@ const HomePage = ({})=>{
 		</Section>
 	));
 
-    return <div>
+    return <div className="c-page c-homepage">
 		<PageNav />
 
 		{renderSections}

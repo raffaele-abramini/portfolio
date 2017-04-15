@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 
 export default ()=> (
-	<div>
+	<main>
 		{routes.map(route=><Route key={route.path} {...route} />)}
-	</div>
+	</main>
 )

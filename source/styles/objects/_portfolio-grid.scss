@@ -1,0 +1,8 @@
+.o-portfolio-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 25vw 25vw 25vw 25vw;
+	grid-column-gap: 1px;
+	grid-row-gap: 1px;
+	width: 100%;
+}

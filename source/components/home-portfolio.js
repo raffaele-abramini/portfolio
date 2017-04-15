@@ -7,13 +7,14 @@ import PortfolioItem from './portfolio-item';
 
 const Portfolio = ({projects, isExtended, extendPortfolio})=>{
 	const portfolioClasses = classnames({
-		'c-portfolio-grid':true,
+		'c-portfolio-section':true,
+		'o-portfolio-grid':true,
 		'is-extended' : isExtended
 	});
     return <div className={portfolioClasses}>
 		{projects.map((project, index)=><PortfolioItem key={index} {...project}/>)}
 
-		<button className="c-portfolio-grid__extend"
+		<button className="c-portfolio-section__extend"
 				onClick={extendPortfolio}>
 			extend
 		</button>

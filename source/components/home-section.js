@@ -13,7 +13,8 @@ class PageNav extends Component {
     	const {children} = this.props;
 
         return (
-			<section ref={elem => this.elem = elem} className="c-homepage-section o-full-height-section">
+			<section ref={elem => this.elem = elem}
+					 className="c-homepage-section">
 				{children}
 			</section>
 		)

@@ -1,12 +1,5 @@
-.c-portfolio-grid {
+.c-portfolio-section {
 	$scope: &;
-
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 25vw 25vw 25vw 25vw;
-	grid-column-gap: 1px;
-	grid-row-gap: 1px;
-	width: 100%;
 
 	position: relative;
 	overflow: hidden;
