@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Skill = ({name})=>{
-    return <div>
+    return <article className="c-skill">
 		{name}
-	</div>
+	</article>
 };
 
 export default Skill;
