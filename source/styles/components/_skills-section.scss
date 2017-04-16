@@ -19,6 +19,7 @@
 		text-transform: uppercase;
 		font-size: 20px;
 		font-weight: 300;
+		margin: 1rem 0;
 
 		&:hover {
 			color: $color-alpha;
@@ -30,11 +31,15 @@
 		max-height: 0;
 		transition: max-height .3s, padding .45s, background .3s;
 		overflow: hidden;
-		
-		display: grid;
 		padding: 0;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		grid-row-gap: 1.5rem;
+
+		@include media-min($screen-medium){
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		}
 	}
 
 	&.is-open {
@@ -43,8 +48,8 @@
 		}
 		#{$scope}__list {
 			background: $color-alpha;
-			max-height: 20em;
-			transition: max-height .5s, padding .3s, background .3s;
+			max-height: 99em;
+			transition: max-height .8s, padding .3s, background .3s;
 			padding:1rem;
 		}
 	}
@@ -52,14 +57,15 @@
 
 
 .c-skill {
-	color: #fff;
 	text-align: center;
 
 	&__icon {
 		font-size: 3rem;
+		color: rgba(white, .5);
 	}
 
 	&__title {
+		color: #fff;
 		margin:.5rem 0 0;
 	}
 }

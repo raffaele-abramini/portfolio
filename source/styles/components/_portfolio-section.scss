@@ -8,8 +8,11 @@
 	transition: max-height .3s;
 
 	&.is-extended {
-		max-height: 200vh;
+		max-height: 999rem;
 
+		@include media-min($screen-medium) {
+			max-height: 200vh;
+		}
 
 		#{$scope}__extend {
 			display: none;
@@ -26,5 +29,16 @@
 		background: rgba(white, .8);
 		width: 100%;
 		padding: 1rem;
+		font-weight: bold;
+		letter-spacing: 2px;
+		font-size: 16px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background .2s, padding .2s;
+
+		&:hover {
+			padding: 2rem 1rem;
+			background: rgba(white, .95);
+		}
 	}
 }

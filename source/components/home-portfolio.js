@@ -16,7 +16,7 @@ const Portfolio = ({projects, isExtended, extendPortfolio})=>{
 
 		<button className="c-portfolio-section__extend"
 				onClick={extendPortfolio}>
-			extend
+			Show more
 		</button>
 	</div>
 };

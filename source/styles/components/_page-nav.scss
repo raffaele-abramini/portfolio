@@ -4,9 +4,13 @@
 	right: 0;
 	background: #fff;
 	z-index: 2;
-	width: 15rem;
+	width: 100%;
 	transform: translate3d(100%,0,0);
 	transition: transform .2s;
+
+	@include media-min($screen-medium){
+		width: 15rem;
+	}
 
 	&.is-open {
 		transform: translate3d(0,0,0);

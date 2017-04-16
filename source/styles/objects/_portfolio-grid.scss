@@ -1,8 +1,24 @@
 .o-portfolio-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 25vw 25vw 25vw 25vw;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 50vw 50vw 50vw 50vw 50vw 50vw 50vw 50vw 50vw 50vw;
 	grid-column-gap: 1px;
 	grid-row-gap: 1px;
 	width: 100%;
+
+	@include media-min($screen-medium){
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 33vw 33vw 33vw;
+	}
+
+
+	@include media-min($screen-medium-large){
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 25vw 25vw 25vw 25vw;
+	}
+
+	@include media-min($screen-large){
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 20vw 20vw 20vw 20vw 20vw;
+	}
 }

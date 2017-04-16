@@ -7,6 +7,11 @@ img {
 	max-width: 100%;
 }
 
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
 
 p {
 	line-height:1.6;
@@ -17,4 +22,8 @@ p {
 a {
 	color: $color-alpha--darker;
 	text-decoration: underline;
+}
+
+ul {
+	margin: 0;
 }
