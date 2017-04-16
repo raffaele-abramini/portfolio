@@ -34,6 +34,7 @@
 		display: grid;
 		padding: 0;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-row-gap: 1.5rem;
 	}
 
 	&.is-open {
@@ -53,4 +54,12 @@
 .c-skill {
 	color: #fff;
 	text-align: center;
+
+	&__icon {
+		font-size: 3rem;
+	}
+
+	&__title {
+		margin:.5rem 0 0;
+	}
 }

@@ -1,11 +1,29 @@
 .c-about-section {
 	display: flex;
-	//align-items: center;
 	justify-content: center;
 	flex-direction:column;
-	padding: 1rem;
+	padding: 2.5rem;
+	width: 50%;
+	position: relative;
+	box-sizing: border-box;
+	background: white;
+	
+	&::after {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		content: ' ';
+		background-size: cover;
+		background: url('/assets/images/about-bg.jpg') right bottom no-repeat;
+		background-attachment: fixed;
+		z-index: -1;
+	}
 
 	&__title {
-
+		color: $color-beta;
+		font-weight: 300;
+		font-size: 20px;
 	}
 }

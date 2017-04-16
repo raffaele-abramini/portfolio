@@ -10,10 +10,12 @@
 	}
 
 	&__description {
-		margin: 0 auto 1rem;
+		margin: 0 auto 2rem;
 		text-align: center;
-		font-size:2rem;
-		color: #000;
+		font-size:25px;
+		font-weight: 300;
+		letter-spacing: 2px;
+		color: $color-beta;
 		text-transform: uppercase;
 	}
 }

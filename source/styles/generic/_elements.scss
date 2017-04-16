@@ -10,5 +10,11 @@ img {
 
 p {
 	line-height:1.6;
-	color: #666;
+	color: #333;
+	font-weight: 300;
+}
+
+a {
+	color: $color-alpha--darker;
+	text-decoration: underline;
 }
