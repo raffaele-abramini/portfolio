@@ -1,9 +1,13 @@
 import React from 'react';
+import SkillsRow from './skills-row'
 
-const About = ({})=>{
+const SkillSection = ({skillCategories})=>{
+	const skillsRows = skillCategories.map((skillCategory, index) => (
+		<SkillsRow key={index} {...skillCategory} />
+	));
     return <div>
-		logo
+		{skillsRows}
 	</div>
 };
 
-export default About;
+export default SkillSection;

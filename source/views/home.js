@@ -4,7 +4,7 @@ import PageNav from '../containers/page-nav-container';
 import Intro from '../components/home-intro';
 import Portfolio from '../containers/portfolio-container';
 import About from '../components/home-about';
-import Skills from '../components/home-skills';
+import Skills from '../containers/skills-container';
 import data from '../data';
 
 const HomePage = ({})=>{

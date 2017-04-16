@@ -6,7 +6,8 @@ const initialState = {
 	sections: data.homeSections,
 	activeSection: data.homeSections.intro,
 	isNavOpen: false,
-	isPortfolioExtended: false
+	isPortfolioExtended: false,
+	openSkillCategories: []
 };
 
 

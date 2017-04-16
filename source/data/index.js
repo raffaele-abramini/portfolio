@@ -117,37 +117,56 @@ export default {
 	],
 	skillCategories: [
 		{
-			name: 'languages',
+			name: 'Languages',
 			skills: [
-				{
-					name: 'Javascript',
-					icon: 'cog'
-				},
-				{
-					name: 'Javascript',
-					icon: 'cog'
-				},
-				{
-					name: 'Javascript',
-					icon: 'cog'
-				}
+				'javascript',
+				'SASS',
+				'HTML 5',
+				'PHP',
+				'SHELL',
+				'Ruby + Rails',
+				'MySQL'
 			]
 		},
 		{
-			name: 'languages',
+			name: 'CMS',
 			skills: [
-				{
-					name: 'Javascript',
-					icon: 'cog'
-				},
-				{
-					name: 'Javascript',
-					icon: 'cog'
-				},
-				{
-					name: 'Javascript',
-					icon: 'cog'
-				}
+				'Silverstripe',
+				'Wordpress',
+				'Joomla',
+				'Drupal',
+				'Opencart'
+			]
+		},
+		{
+			name: 'Libraries and Workflow',
+			skills: [
+				'Angular',
+				'Gulp',
+				'Grunt',
+				'Git',
+				'Docker',
+				'Vagrant',
+				'NPM',
+				'Bower',
+				'jQuery',
+				'Bourbon',
+				'Susy',
+				'Semaphore',
+				'Bitbucket'
+			]
+		},
+		{
+			name: 'Software',
+			skills: [
+				'PhpStorm',
+				'Sublime Text',
+				'RubyMine',
+				'Sketch',
+				'Inkscape',
+				'Photoshop',
+				'Illustrator',
+				'inDesign'
 			]
 		}
 	]
