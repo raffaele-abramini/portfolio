@@ -28,12 +28,13 @@
 
 		@for $i from 1 through 30 {
 			&:nth-child(#{$i})	{
-				animation-delay: #{.1 + $i * .03}s;
+				animation-delay: #{.1 + $i * .05}s;
 			}
 		}
 
 		&--slide {
 			animation-name: slideInRight;
+			animation-duration: .3s;
 
 			@for $i from 1 through 5 {
 				&:nth-child(#{$i})	{
