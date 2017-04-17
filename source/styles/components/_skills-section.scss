@@ -30,7 +30,7 @@
 	&__list {
 		background: darken($color-alpha, 10%);
 		max-height: 0;
-		transition: max-height .3s, padding .45s, background .3s;
+		transition: max-height .2s, padding .45s, background .3s;
 		overflow: hidden;
 		padding: 0;
 

@@ -70,7 +70,7 @@ class PageNav extends Component {
 
 	renderItems(){
 		return Object.values(this.props.homeSections).map(section => (
-			<a className="c-page-nav__nav-item"
+			<a className="c-page-nav__nav-item o-animate-on-open"
 			   href={`#${section}`}
 			   key={section}
 			   onClick={event=>this.handleNavClick(section, event)}>

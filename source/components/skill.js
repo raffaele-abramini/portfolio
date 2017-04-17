@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skill = ({name})=>{
-    return <article className="c-skill">
+    return <article className="c-skill o-animate-on-open o-animate-on-open--pop">
 		<svg className="c-skill__icon c-icon">
 			<use xlinkHref="#cogs" />
 		</svg>
