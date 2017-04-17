@@ -12,7 +12,7 @@
     "buildClient:dev": "node node_modules/.bin/webpack --watch",
     "watch": "node node_modules/.bin/webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall" : "npm run buildServer:prod && npm runbuildClient:prod && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
+    "postinstall" : "npm run buildServer:prod && npm run buildClient:prod && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
   },
   "repository": {
     "type": "git",
