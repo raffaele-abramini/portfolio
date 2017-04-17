@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../data';
 
-const SocialNav = ({})=>{
+const SocialNav = ({extraClasses})=>{
 	const renderLinks = data.social.map(({link, type})=>(
 		<a className="c-social-nav__item"
 			href={link}
@@ -14,7 +14,7 @@ const SocialNav = ({})=>{
 	));
 
     return (
-    	<nav className="c-page-nav__social-nav c-social-nav">
+    	<nav className={` c-social-nav ${extraClasses}`}>
 			{renderLinks}
 		</nav>
 	)

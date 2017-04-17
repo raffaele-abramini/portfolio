@@ -1,0 +1,33 @@
+.c-footer {
+	&__top {
+		background: $color-alpha;
+		padding: 1.5rem;
+
+		@include media-min($screen-medium) {
+			padding: 2.5rem;
+
+		}
+	}
+
+	&__title {
+		margin-bottom: 0;
+		color: #fff;
+		font-weight: 100;
+		font-size: 19px;
+		letter-spacing: 1px;
+	}
+
+	&__bottom {
+		text-align: center;
+		padding: 1rem 0;
+
+		p {
+			color: $color-beta;
+			font-size: 14px;
+
+			&:not(:last-child) {
+				margin-bottom: .4rem;
+			}
+		}
+	}
+}

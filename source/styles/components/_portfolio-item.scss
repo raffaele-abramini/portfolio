@@ -14,14 +14,19 @@
 		height: 100%;
 		width: 100%;
 		content: ' ';
-		background: rgba($color-alpha, .9);
+		background: rgba(black, .6);
 		top: 0;
 		left: 0;
-		transform: translate3d(0%,100%,0);
 		transition: transform .2s;
 		display: flex;
 		align-items: center;
 		justify-content:center;
+
+		@include media-min($screen-medium){
+			transform: translate3d(0%,100%,0);
+			background: rgba($color-alpha, .9);
+
+		}
 
 		a {
 			color: #fff;

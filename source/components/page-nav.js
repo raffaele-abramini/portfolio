@@ -32,7 +32,7 @@ class PageNav extends Component {
 						{this.renderItems()}
 					</nav>
 
-					<SocialNav />
+					<SocialNav extraClasses="c-page-nav__social-nav" />
 				</aside>
 			</section>
 		)
