@@ -46,7 +46,7 @@ class PageNav extends Component {
 			'c-page-nav__arrow-prev' : isPrev,
 			'c-page-nav__arrow-next' : !isPrev,
 			'is-disabled' : isPrev && currentIndex === 0
-							|| !isPrev && currentIndex === (Object.values(this.props.homeSections).length -1)
+							|| !isPrev && currentIndex === (Object.keys(this.props.homeSections).length -1)
 		});
 
 
@@ -69,7 +69,7 @@ class PageNav extends Component {
 	}
 
 	renderItems(){
-		return Object.values(this.props.homeSections).map(section => (
+		return Object.keys(this.props.homeSections).map(section => (
 			<a className="c-page-nav__nav-item o-animate-on-open"
 			   href={`#${section}`}
 			   key={section}
@@ -104,7 +104,7 @@ class PageNav extends Component {
 			if(currentIndex + change < 0) return;
 		} else {
 			change++;
-			if(currentIndex + change >= Object.values(this.props.homeSections).length) return;
+			if(currentIndex + change >= Object.keys(this.props.homeSections).length) return;
 		}
 
 		this.moveSectionTo(currentIndex+change);
@@ -112,7 +112,7 @@ class PageNav extends Component {
 	}
 
 	getCurrentSectionIndex(){
-		return Object.values(this.props.homeSections).indexOf(this.props.activeSection);
+		return Object.keys(this.props.homeSections).indexOf(this.props.activeSection);
 	}
 
 	moveSectionTo(number){

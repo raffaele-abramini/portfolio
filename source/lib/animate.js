@@ -5,7 +5,7 @@ class Animate {
 		this.elements = document.querySelectorAll(Animate.selector);
 		this.elements = [...Array.from(document.querySelectorAll(Animate.selector))];
 
-		window.addEventListener('scroll', throttle(this.handleScroll.bind(this), 100))
+		global.addEventListener('scroll', throttle(this.handleScroll.bind(this), 100))
 	}
 
 	handleScroll(){
@@ -22,7 +22,7 @@ class Animate {
 	}
 
 	isInView(element){
-		return window.pageYOffset > element.offsetTop - window.innerHeight/2;
+		return global.pageYOffset > element.offsetTop - global.innerHeight/2;
 	}
 
 	static selector = '[data-js-animate-on-view]';

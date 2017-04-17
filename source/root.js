@@ -5,7 +5,6 @@ import Footer from './components/footer';
 
 
 export default ()=> {
-	window.scroll(0,0);
 	return (
 		<main>
 			{routes.map(route=><Route key={route.path} {...route} />)}
