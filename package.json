@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/.bin/nodemon ./server.bundle.js",
-    "build:prod": "node node_modules/.bin/webpack --config ./webpack.config.server.js --watch",
+    "start": "node ./server.bundle.js",
+    "start:dev": "node node_modules/.bin/nodemon ./server.bundle.js",
+    "buildServer:prod": "node node_modules/.bin/webpack --config ./webpack.config.server.js",
+    "buildServer:dev": "node node_modules/.bin/webpack --config ./webpack.config.server.js --watch",
+    "buildClient:prod": "node node_modules/.bin/webpack",
+    "buildClient:dev": "node node_modules/.bin/webpack --watch",
     "watch": "node node_modules/.bin/webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall" : "npm run buildServer:prod && npm runbuildClient:prod && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
   },
   "repository": {
     "type": "git",
