@@ -6,7 +6,13 @@
 	&__logo {
 		margin: auto;
 		align-self: center;
-		width: 180px;
+		width: 150px;
+	}
+
+	&__logo-svg {
+		display: block;
+		width: 150px;
+		height: 150px;
 	}
 
 	&__description {

@@ -8,7 +8,7 @@
     "start:dev": "node node_modules/.bin/nodemon ./server.bundle.js",
     "buildServer:prod": "node node_modules/.bin/webpack --config ./webpack.config.server.js",
     "buildServer:dev": "node node_modules/.bin/webpack --config ./webpack.config.server.js --watch",
-    "buildClient:prod": "node node_modules/.bin/webpack",
+    "buildClient:prod": "node node_modules/.bin/webpack -p",
     "buildClient:dev": "node node_modules/.bin/webpack --watch",
     "copyAssets": "cp -R ./source/images/ ./dist/images/",
     "watch": "node node_modules/.bin/webpack --watch",
