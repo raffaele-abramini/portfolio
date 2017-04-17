@@ -11,7 +11,7 @@
 		max-height: 999rem;
 
 		@include media-min($screen-medium) {
-			max-height: 200vh;
+			max-height: 999rem;
 		}
 
 		#{$scope}__extend {

@@ -21,6 +21,9 @@
 		display: flex;
 		align-items: center;
 		justify-content:center;
+		text-align: center;
+		padding:.5rem;
+		box-sizing: border-box;
 
 		@include media-min($screen-medium){
 			transform: translate3d(0%,100%,0);
@@ -32,5 +35,14 @@
 			color: #fff;
 			text-decoration: none;
 		}
+	}
+
+	&__tags {
+		display: block;
+		font-size:13px;
+		color: rgba(white, .7);
+		margin-top:.5rem;
+		padding-top: .5rem;
+		border-top:1px solid rgba(white, .4);
 	}
 }

@@ -10,7 +10,7 @@ const Intro = ({})=>{
 			</h1>
 
 			<h2 className="c-home-intro__description">
-				Web developer
+				Web development
 			</h2>
 		</div>
 	)

@@ -7,94 +7,148 @@ export default {
 	},
 	projects : [
 		{
-			title: "Suzuki cars",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Bikes.suzuki.co.uk",
+			"url": "//bikes.suzuki.co.uk",
+			"tags": "Frontend development, gulp, jquery, oojs, sass",
+			"image": "/assets/images/portfolio/suzuki-bikes.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Cars.suzuki.co.uk",
+			"url": "//cars.suzuki.co.uk",
+			"tags": "Frontend development, gulp, jquery, oojs, sass",
+			"image": "/assets/images/portfolio/suzuki-cars.jpg"
 		},
 		{
-			title: "Suzuki cars",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "NFA",
+			"url": "//nfa.co.uk",
+			"tags": "Silverstripe based website (back & front end)",
+			"image": "/assets/images/portfolio/nfa.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Debenhams Finance",
+			"url": "//finance.debenhams.com",
+			"tags": "Frontend modifications, server-side customised scripts for email tracking",
+			"image": "/assets/images/portfolio/debenhams.jpg"
 		},
 		{
-			title: "Suzuki cars",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "The Flow Country",
+			"url": "//theflowcountry.org.uk",
+			"tags": "Silverstripe based website (back & front end), custom Instagram import functions",
+			"image": "/assets/images/portfolio/flowcountry.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "The Racegoers Club",
+			"url": "//racegoersclub.co.uk",
+			"tags": "Custom e-commerce structure and Silverstripe website (back & front end), Angular app for Shopping basket",
+			"image": "/assets/images/portfolio/racegoers.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "NBCU International",
+			"url": "//nbcuinternational.com/distribution-landing",
+			"tags": "SVG interactive map, Frontend modifications",
+			"image": "/assets/images/portfolio/nbc.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "GBR",
+			"url": "//greatbritishracing.com/horse-racing/racecards",
+			"tags": "Angular app for racecards and results.",
+			"image": "/assets/images/portfolio/gbr.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "British Study Centres",
+			"url": "//british-study.com",
+			"tags": "Frontend Development, Responsive, PHP, jQuery, JSON Multilingual System",
+			"image": "/assets/images/portfolio/bsc.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Blog - British Study Centres",
+			"url": "//british-study.com/blog",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/bsc_blog.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Corriere di Como",
+			"url": "//corrieredicomo.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery, Custom Backend",
+			"image": "/assets/images/portfolio/cdc.jpg"
 		},
 		{
-			title: "Suzuki cars",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Valpoci",
+			"url": "//valpoci.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/valpoci.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Exa Pumps",
+			"url": "//exapumps.it",
+			"tags": "Wordpress, Design, Development, restricted areas, PHP, jQuery",
+			"image": "/assets/images/portfolio/exa.jpg"
 		},
 		{
-			title: "Suzuki cars",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Folatti",
+			"url": "//folatti.it",
+			"tags": "Wordpress, Development, Responsive, user custom contents, PHP, jQuery",
+			"image": "/assets/images/portfolio/fola.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "KPM Broaching",
+			"url": "//kpmbroaching.com",
+			"tags": "Landing Page, Design, Development, Responsive, jQuery",
+			"image": "/assets/images/portfolio/kpm.jpg"
 		},
 		{
-			title: "Suzuki cars",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Dema Costruzioni",
+			"url": "//dema-costruzioni.com",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/dema.jpg"
 		},
 		{
-			title: "Suzuki bikes",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Tessile & Salute",
+			"url": "//tessileesalute.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/tessile.jpg"
 		},
 		{
-			title: "Suzuki marine",
-			url : '',
-			image: '/assets/images/portfolio/flowcountry.jpg'
+			"title": "Immobiliare Morbegno",
+			"url": "//immobiliaremorbegno.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/immob.jpg"
+		},
+		{
+			"title": "CP Technology",
+			"url": "//cptechnology.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/cptech.jpg"
+		},
+		{
+			"title": "Latteria Valtellina",
+			"url": "//latteriavaltellina.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/latteria.jpg"
+		},
+		{
+			"title": "Latteria Valtellina: Progetto Scuola",
+			"url": "//scuola.latteriavaltellina.it",
+			"tags": "Wordpress, Development, Responsive, PHP, jQuery",
+			"image": "/assets/images/portfolio/scuolalat.jpg"
+		},
+		{
+			"title": "Miele Dell'Orto",
+			"url": "//mieledellorto.it",
+			"tags": "Wordpress, Development",
+			"image": "/assets/images/portfolio/miele.jpg"
+		},
+		{
+			"title": "BLP Costruzioni",
+			"url": "//blpcostruzioni.com",
+			"tags": "Wordpress, Development, PHP, jQuery",
+			"image": "/assets/images/portfolio/blp.jpg"
+		},
+		{
+			"title": "Okaypaper",
+			"url": "//www.okaypaper.com",
+			"tags": "Wordpress, Development, PHP, jQuery",
+			"image": "/assets/images/portfolio/okaypap.jpg"
 		}
 	],
 	social : [
