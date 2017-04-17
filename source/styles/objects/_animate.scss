@@ -5,18 +5,39 @@
 	.is-open & {
 		animation: slideInRight .2s forwards;
 
-		@for $i from 1 through 4 {
+		@for $i from 1 through 20 {
 			&:nth-child(#{$i})	{
 				animation-delay: #{.1 + $i * .05}s;
 			}
 		}
 
 		&--pop {
-			animation: pop .4s forwards;
+			animation-name: pop;
+			animation-duration: .4s;
+		}
+	}
+}
 
-			@for $i from 1 through 20 {
+
+.o-animate-in-view {
+	$scope:&;
+	opacity: 0;
+
+	.is-in-view & {
+		animation: fadeIn .2s forwards;
+
+		@for $i from 1 through 30 {
+			&:nth-child(#{$i})	{
+				animation-delay: #{.1 + $i * .03}s;
+			}
+		}
+
+		&--slide {
+			animation-name: slideInRight;
+
+			@for $i from 1 through 5 {
 				&:nth-child(#{$i})	{
-					animation-delay: #{.1 + $i * .05}s;
+					animation-delay: #{.1 + $i * .1}s;
 				}
 			}
 		}
@@ -26,11 +47,22 @@
 @keyframes slideInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(10%);
+		transform: translateX(1rem);
 	}
 	100% {
 		opacity: 1;
 		transform: translateX(0);
+	}
+}
+
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 

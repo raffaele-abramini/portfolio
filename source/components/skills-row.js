@@ -8,6 +8,8 @@ const SkillsRow = ({name, skills, isOpen, toggle})=>{
 	));
 	const rowClasses = classnames({
 		'c-skills-row' : true,
+		'o-animate-in-view' : true,
+		'o-animate-in-view--slide' : true,
 		'is-open': isOpen
 	});
 

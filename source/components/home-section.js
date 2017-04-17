@@ -14,7 +14,8 @@ class PageNav extends Component {
 
         return (
 			<section ref={elem => this.elem = elem}
-					 className="c-homepage-section">
+					 className="c-homepage-section"
+					 data-js-animate-on-view>
 				{children}
 			</section>
 		)

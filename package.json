@@ -22,6 +22,7 @@
     "classnames": "^2.2.5",
     "express": "^4.15.2",
     "history": "^4.6.1",
+    "lodash.throttle": "^4.1.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
@@ -33,14 +34,14 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
     "prop-types": "^15.5.8",
-    "css-loader": "^0.28.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "webpack": "^2.3.3",
-    "node-sass": "^4.5.2"
+    "webpack": "^2.3.3"
   }
 }
