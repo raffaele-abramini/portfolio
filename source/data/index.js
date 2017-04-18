@@ -173,11 +173,11 @@ export default {
 		{
 			name: 'Languages',
 			skills: [
-				'javascript',
+				'Javascript',
 				'SASS',
 				'HTML 5',
 				'PHP',
-				'SHELL',
+				'Shell',
 				'Ruby + Rails',
 				'MySQL'
 			]
@@ -195,19 +195,18 @@ export default {
 		{
 			name: 'Libraries and Workflow',
 			skills: [
+				'React + Redux',
+				'Webpack',
 				'Angular',
 				'Gulp',
 				'Grunt',
 				'Git',
+				'Node.js',
 				'Docker',
 				'Vagrant',
 				'NPM',
-				'Bower',
 				'jQuery',
-				'Bourbon',
-				'Susy',
-				'Semaphore',
-				'Bitbucket'
+				'Continuous integration'
 			]
 		},
 		{
@@ -217,7 +216,6 @@ export default {
 				'Sublime Text',
 				'RubyMine',
 				'Sketch',
-				'Inkscape',
 				'Photoshop',
 				'Illustrator',
 				'inDesign'
