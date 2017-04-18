@@ -13,7 +13,8 @@
     "copyAssets": "cp -R ./source/images/ ./dist/images/",
     "watch": "node node_modules/.bin/webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall" : "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
+    "buildAndCopy" : "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets",
+    "postinstall" : "npm run buildAndCopy && pm2 start && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
   },
   "repository": {
     "type": "git",
