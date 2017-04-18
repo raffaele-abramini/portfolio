@@ -14,7 +14,7 @@
     "watch": "node node_modules/.bin/webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildAndCopy" : "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets",
-    "postinstall" : "npm run buildAndCopy && pm2 start && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
+    "postinstall" : "npm run buildAndCopy && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
   },
   "repository": {
     "type": "git",
