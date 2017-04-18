@@ -1,24 +1,17 @@
 .o-portfolio-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(30, 50vw);
-	grid-column-gap: 1px;
-	grid-row-gap: 1px;
-	width: 100%;
+	@include clearfix;
 
-	@include media-min($screen-medium){
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows:  repeat(30, 33vw);
-	}
-
-
-	@include media-min($screen-medium-large){
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: repeat(30, 25vw);
-	}
-
-	@include media-min($screen-large){
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-		grid-template-rows: repeat(30, 20vw);
+	> *:not(:last-child) {
+		float: left;
+		width: calc(50vw - 1px);
+		@include media-min($screen-medium) {
+			width: calc(33vw - 1px);
+		}
+		@include media-min($screen-medium-large) {
+			width: calc(25vw - 1px);
+		}
+		@include media-min($screen-large) {
+			width: calc(20vw - 1px);
+		}
 	}
 }

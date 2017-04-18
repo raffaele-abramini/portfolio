@@ -2,6 +2,15 @@
 	$scope: &;
 	position: relative;
 	overflow: hidden;
+	border-bottom: 1px solid white;
+
+	& + & {
+		border-left:1px solid white;
+	}
+
+	img {
+		display: block;
+	}
 
 	&:hover {
 		#{$scope}__inner {
