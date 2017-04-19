@@ -1,34 +1,56 @@
 {
-  "name": "oldirony-portfolio",
+  "name": "portfolio",
   "version": "2.0.0",
   "description": "",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "bourbon": "^4.2.7",
-    "breakpoint-sass": "~2.7.0",
-    "browser-sync": "~2.12.3",
-    "gulp": "~3.9.1",
-    "gulp-clean-css": "~2.0.3",
-    "gulp-compile-handlebars": "~0.6.1",
-    "gulp-concat": "~2.6.0",
-    "gulp-connect-php": "0.0.7",
-    "gulp-copy": "0.0.2",
-    "gulp-plumber": "~1.1.0",
-    "gulp-rename": "~1.2.2",
-    "gulp-replace": "~0.5.4",
-    "gulp-sass": "~2.2.0",
-    "gulp-shell": "~0.5.2",
-    "gulp-tinypng-compress": "~1.2.0",
-    "gulp-uglify": "~1.5.3",
-    "jquery": "~2.2.4",
-    "susy": "~2.2.12",
-    "velocity-animate": "~1.2.3",
-    "waypoints": "~4.0.0"
-  },
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.bundle.js",
+    "start:dev": "node node_modules/.bin/nodemon ./server.bundle.js",
+    "buildServer:prod": "node node_modules/.bin/webpack --config ./webpack.config.server.js",
+    "buildServer:dev": "node node_modules/.bin/webpack --config ./webpack.config.server.js --watch",
+    "buildClient:prod": "node node_modules/.bin/webpack",
+    "buildClient:dev": "node node_modules/.bin/webpack --watch",
+    "copyAssets": "cp -R ./source/images/ ./dist/images/",
+    "watch": "node node_modules/.bin/webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildAndCopy" : "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets",
+    "postinstall" : "npm run buildAndCopy && pm2 start -f '/usr/local/bin/npm' --name 'new-portfolio' -- start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldirony/portfolio.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "bugs": {
+    "url": "https://github.com/oldirony/portfolio/issues"
+  },
+  "homepage": "https://github.com/oldirony/portfolio#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "history": "^4.6.1",
+    "lodash.throttle": "^4.1.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "prop-types": "^15.5.8",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.3"
+  }
 }

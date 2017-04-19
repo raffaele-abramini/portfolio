@@ -1,0 +1,38 @@
+.c-home-intro {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	&__logo {
+		margin: auto;
+		align-self: center;
+		width: 150px;
+		padding-top: 2rem;
+
+		@include media-min($screen-medium){
+			width: 180px;
+		}
+	}
+
+	&__logo-svg {
+		display: block;
+		width: 150px;
+		height: 150px;
+
+
+		@include media-min($screen-medium){
+			width: 180px;
+			height: 180px;
+		}
+	}
+
+	&__description {
+		margin: 0 auto 5rem;
+		text-align: center;
+		font-size:25px;
+		font-weight: 300;
+		letter-spacing: 2px;
+		color: $color-beta;
+		text-transform: uppercase;
+	}
+}

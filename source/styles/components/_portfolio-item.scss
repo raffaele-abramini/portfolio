@@ -1,0 +1,53 @@
+.c-portfolio-item {
+	$scope: &;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid white;
+
+	img {
+		display: block;
+	}
+
+	&:hover {
+		#{$scope}__inner {
+			transform: translate3d(0%,0%,0);
+		}
+	}
+
+	&__inner {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: ' ';
+		background: rgba(black, .6);
+		top: 0;
+		left: 0;
+		transition: transform .2s;
+		display: flex;
+		align-items: center;
+		justify-content:center;
+		text-align: center;
+		padding:.5rem;
+		box-sizing: border-box;
+
+		@include media-min($screen-medium){
+			transform: translate3d(0%,100%,0);
+			background: rgba($color-alpha, .9);
+
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	&__tags {
+		display: block;
+		font-size:13px;
+		color: rgba(white, .7);
+		margin-top:.5rem;
+		padding-top: .5rem;
+		border-top:1px solid rgba(white, .4);
+	}
+}

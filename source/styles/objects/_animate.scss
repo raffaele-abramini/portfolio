@@ -1,0 +1,93 @@
+.o-animate-on-open {
+	$scope:&;
+	opacity: 0;
+
+	.is-open & {
+		animation: slideInRight .2s forwards;
+
+		@for $i from 1 through 20 {
+			&:nth-child(#{$i})	{
+				animation-delay: #{.1 + $i * .05}s;
+			}
+		}
+
+		&--pop {
+			animation-name: pop;
+			animation-duration: .4s;
+		}
+	}
+}
+
+
+.o-animate-in-view {
+	$scope:&;
+	opacity: 0;
+
+	.is-in-view & {
+		animation: fadeIn .2s forwards;
+
+		@for $i from 1 through 30 {
+			&:nth-child(#{$i})	{
+				animation-delay: #{.1 + $i * .05}s;
+			}
+		}
+
+		&--slide {
+			animation-name: slideInRight;
+			animation-duration: .3s;
+
+			@for $i from 1 through 5 {
+				&:nth-child(#{$i})	{
+					animation-delay: #{.1 + $i * .1}s;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slideInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+@keyframes pop {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(.8);
+	}
+	60% {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

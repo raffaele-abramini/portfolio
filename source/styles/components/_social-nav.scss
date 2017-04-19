@@ -1,0 +1,13 @@
+.c-social-nav {
+	&__item {
+		padding: .5rem;
+		color: #fff;
+		display: inline-block;
+		transition: color .2s;
+		font-size: 1.1rem;
+
+		&:hover {
+			color: rgba(black, .5);
+		}
+	}
+}
