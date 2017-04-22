@@ -2,7 +2,8 @@ import {
 	SWITCH_SECTION,
 	TOGGLE_NAV,
 	EXTEND_PORTFOLIO_SECTION,
-	TOGGLE_SKILLS_ROW
+	TOGGLE_SKILLS_ROW,
+	LOAD_PORTOFOLIO_IMAGES
 } from './types';
 
 export function switchSectionTo(newSection) {
@@ -29,5 +30,11 @@ export function toggleSkillsRow(rowName) {
 	return {
 		type: TOGGLE_SKILLS_ROW,
 		payload: rowName
+	}
+}
+
+export function loadPortfolioImages() {
+	return {
+		type: LOAD_PORTOFOLIO_IMAGES,
 	}
 }

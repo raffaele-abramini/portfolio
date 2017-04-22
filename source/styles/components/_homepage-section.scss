@@ -1,4 +1,10 @@
 .c-homepage-section {
 	display: flex;
 	min-height: 100vh;
+
+	&--reduce-on-mobile {
+		@include media-max($screen-medium){
+			min-height: 0;
+		}
+	}
 }

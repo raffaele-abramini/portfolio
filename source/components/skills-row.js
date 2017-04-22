@@ -1,6 +1,7 @@
 import React from 'react';
 import Skill from './skill';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 const SkillsRow = ({name, skills, isOpen, toggle})=>{
 	const renderSkills = skills.map((skill, index)=>(
@@ -24,6 +25,13 @@ const SkillsRow = ({name, skills, isOpen, toggle})=>{
 			</ul>
 		</div>
 	)
+};
+
+SkillsRow.propTypes = {
+	name: PropTypes.string.isRequired,
+	skills: PropTypes.array.isRequired,
+	isOpen: PropTypes.bool.isRequired,
+	toggle: PropTypes.func.isRequired
 };
 
 export default SkillsRow;

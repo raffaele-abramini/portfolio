@@ -1,15 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {extendPortfolio} from '../actions/home-actions';
+import {extendPortfolio,loadPortfolioImages} from '../actions/home-actions';
 import Portfolio from '../components/home-portfolio';
 
 function mapStateToProps(state){
 	const {projects} = state.portfolio;
-	const {isPortfolioExtended} = state.home;
+	const {isPortfolioExtended, renderPortfolioImages} = state.home;
 	return {
 		projects,
-		isExtended: isPortfolioExtended
+		isExtended: isPortfolioExtended,
+		renderPortfolioImages
 	}
 }
 
-export default connect(mapStateToProps, {extendPortfolio})(Portfolio);
+export default connect(mapStateToProps, { extendPortfolio, loadPortfolioImages })(Portfolio);
