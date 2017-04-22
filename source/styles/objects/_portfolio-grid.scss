@@ -3,14 +3,14 @@
 
 	> *:not(:last-child) {
 		float: left;
-		width: calc(50vw - 1px);
+		width: calc(50% - 1px);
 
 		&:nth-child(2n) {
 			border-left:1px solid white;
 		}
 
 		@include media-min($screen-medium) {
-			width: calc(33vw - 1px);
+			width: calc(33% - 1px);
 
 			&:nth-child(2n) {
 				border-left:unset;
@@ -22,7 +22,7 @@
 			}
 		}
 		@include media-min($screen-medium-large) {
-			width: calc(25vw - 1px);
+			width: calc(25% - 1px);
 
 			&:nth-child(3n + 2),
 			&:nth-child(3n + 3) {
@@ -37,7 +37,7 @@
 			}
 		}
 		@include media-min($screen-large) {
-			width: calc(20vw - 1px);
+			width: calc(20% - 1px);
 
 			&:nth-child(4n + 2),
 			&:nth-child(4n + 3),

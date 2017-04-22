@@ -1,5 +1,11 @@
 import data from '../data';
-import { SWITCH_SECTION, TOGGLE_NAV, EXTEND_PORTFOLIO_SECTION, TOGGLE_SKILLS_ROW } from '../actions/types';
+import {
+	SWITCH_SECTION,
+	TOGGLE_NAV,
+	EXTEND_PORTFOLIO_SECTION,
+	TOGGLE_SKILLS_ROW,
+	LOAD_PORTOFOLIO_IMAGES
+} from '../actions/types';
 
 
 const initialState = {
@@ -7,6 +13,7 @@ const initialState = {
 	activeSection: data.homeSections.intro,
 	isNavOpen: false,
 	isPortfolioExtended: false,
+	renderPortfolioImages: false,
 	openSkillsRows: []
 };
 
@@ -29,6 +36,9 @@ export default (state = initialState, {type, payload})=>{
 			}
 
 			return {...state, openSkillsRows};
+
+		case LOAD_PORTOFOLIO_IMAGES:
+			return {...state, renderPortfolioImages: true}
 	}
 	return state;
 }
