@@ -38,6 +38,8 @@ export default (state = initialState, {type, payload})=>{
 			return {...state, openSkillsRows};
 
 		case LOAD_PORTOFOLIO_IMAGES:
+			if(!global || !global.isClient) return state; // server shouldn't load images
+
 			return {...state, renderPortfolioImages: true}
 	}
 	return state;

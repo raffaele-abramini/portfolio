@@ -1,6 +1,7 @@
 .c-homepage-section {
 	display: flex;
 	min-height: 100vh;
+	overflow: hidden;
 
 	&--reduce-on-mobile {
 		@include media-max($screen-medium){
