@@ -4,7 +4,7 @@ import HomeSection from '../components/home-section';
 
 function mapStateToProps(state, {name}){
 	return {
-		isActive : state.home.activeSection === name,
+		isActive : state.home.activeSection === name
 	}
 }
 

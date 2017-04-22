@@ -28,7 +28,8 @@ class Home extends Component {
 			},
 			{
 				name: skills,
-				component: <Skills/>
+				component: <Skills/>,
+				reduceOnMobile: true
 			}
 		]
 	}
@@ -47,8 +48,8 @@ class Home extends Component {
     }
 
     renderSections(){
-    	return this.sections.map(({name, component})=> (
-			<Section name={name} key={name}>
+    	return this.sections.map(({name, component, reduceOnMobile})=> (
+			<Section name={name} key={name} reduceOnMobile={reduceOnMobile}>
 				{component}
 			</Section>
 		));

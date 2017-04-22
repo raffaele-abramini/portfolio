@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin media-max($size){
+	@media screen and (max-width: #{$size - 1}) {
+		@content;
+	}
+}
+
 
 @mixin clearfix(){
 	&:after {
