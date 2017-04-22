@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 import SocialNav from './social-nav';
 
@@ -117,6 +118,14 @@ class PageNav extends Component {
 
 	moveSectionTo(number){
 		this.props.switchSectionTo(this.props.homeSections[Object.keys(this.props.homeSections)[number]]);
+	}
+
+	static propTypes = {
+		isNavOpen: PropTypes.bool.isRequired,
+		activeSection: PropTypes.string.isRequired,
+		homeSections: PropTypes.object.isRequired,
+		switchSectionTo: PropTypes.func.isRequired,
+		toggleNav: PropTypes.func.isRequired
 	}
 
 }
