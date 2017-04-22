@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node:
+    build: .
+    image: node:boron
+    volumes:
+    - ./:/var/www/oldirony.cc
+    working_dir: /var/www/oldirony.cc
+    command: sh -c 'npm install --unsafe-perm'
+    ports:
+      - "8080:8080"
+
