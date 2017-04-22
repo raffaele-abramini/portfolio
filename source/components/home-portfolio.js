@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import proptypes from 'prop-types';
 import classnames from 'classnames';
 
 import PortfolioItem from './portfolio-item';
@@ -27,7 +28,15 @@ class Portfolio extends Component{
 			</button>
 		</div>
 	}
-};
+
+	static propTypes = {
+		projects: proptypes.array.isRequired,
+		isExtended: proptypes.bool.isRequired,
+		extendPortfolio: proptypes.func.isRequired,
+		loadPortfolioImages: proptypes.func.isRequired,
+		renderPortfolioImages: proptypes.bool.isRequired
+	}
+}
 
 
 

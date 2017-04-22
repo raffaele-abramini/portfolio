@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Skill = ({name})=>{
     return <article className="c-skill o-animate-on-open o-animate-on-open--pop">
@@ -9,6 +10,10 @@ const Skill = ({name})=>{
 			{name}
 		</h4>
 	</article>
+};
+
+Skill.propTypes = {
+	name: PropTypes.string.isRequired
 };
 
 export default Skill;

@@ -28,7 +28,8 @@ class PageNav extends Component {
     }
 
     static propTypes = {
-    	reduceOnMobile : PropTypes.bool
+    	reduceOnMobile : PropTypes.bool,
+		isActive: PropTypes.bool.isRequired
 	}
 }
 
