@@ -2,13 +2,14 @@
 	display: flex;
 	justify-content: center;
 	flex-direction:column;
-	padding: 2.5rem;
+	padding: 2.5rem 1.5rem;
 	position: relative;
 	box-sizing: border-box;
 	background: white;
 
 	@include media-min($screen-medium) {
 		width: 60%;
+		padding: 2.5rem;
 	}
 	@include media-min($screen-large) {
 		width: 50%;

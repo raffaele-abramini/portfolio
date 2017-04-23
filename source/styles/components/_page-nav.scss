@@ -22,8 +22,12 @@
 		left: 0;
 		z-index:10;
 		transform: translate3d(-100%,0,0);
-		padding: 1rem;
+		padding: 1rem .5rem;
 		text-align: center;
+
+		@include media-min($screen-medium) {
+			padding: 1rem;
+		}
 	}
 
 	&__toggle {
