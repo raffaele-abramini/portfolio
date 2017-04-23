@@ -14,7 +14,7 @@ class PageNav extends Component {
         return (
 			<section className={navClasses}>
 				<div className="c-page-nav__on-page">
-					<button className="c-page-nav__toggle c-button--no-style"
+					<button className="c-page-nav__toggle c-button--no-style o-animate-on-load o-animate-on-load--3"
 							onClick={()=>this.handleToggleClick()}>
 						<svg className="c-icon">
 							<use xlinkHref="#nav" />
@@ -46,6 +46,9 @@ class PageNav extends Component {
 			'c-button--no-style' : true,
 			'c-page-nav__arrow-prev' : isPrev,
 			'c-page-nav__arrow-next' : !isPrev,
+			'o-animate-on-load' : true,
+			'o-animate-on-load--4' : isPrev,
+			'o-animate-on-load--5' : !isPrev,
 			'is-disabled' : isPrev && currentIndex === 0
 							|| !isPrev && currentIndex === (Object.keys(this.props.homeSections).length -1)
 		});
