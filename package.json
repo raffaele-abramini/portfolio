@@ -11,7 +11,7 @@
     "buildServer:prod": "node node_modules/.bin/webpack --config ./webpack.config.server.js -p",
     "buildClient:prod": "node node_modules/.bin/webpack -p",
     "copyAssets": "cp -R ./source/images/ ./dist/images/",
-    "buildAndCopy": "npm run buildServer:prod & npm run buildClient:prod & npm run copyAssets"
+    "buildAndCopy": "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets"
   },
   "repository": {
     "type": "git",
