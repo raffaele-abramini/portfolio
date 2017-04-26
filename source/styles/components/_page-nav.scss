@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	background: #fff;
+	background: $color-gamma;
 	z-index: 2;
 	width: 100%;
 	transform: translate3d(100%,0,0);
@@ -66,7 +66,7 @@
 	&__toggle-inner {
 		padding: 1rem;
 		align-self: flex-end;
-		color: #fff;
+		color: $color-gamma;
 		font-size: 1.1rem;
 		transition: color .2s;
 
@@ -82,7 +82,7 @@
 
 	&__nav-item {
 		display: block;
-		color: #fff;
+		color: $color-gamma;
 		align-self: flex-start;
 		text-decoration: none;
 		padding:.75rem 1.5rem;

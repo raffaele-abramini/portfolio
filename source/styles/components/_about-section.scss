@@ -5,7 +5,7 @@
 	padding: 2.5rem 1.5rem;
 	position: relative;
 	box-sizing: border-box;
-	background: white;
+	background: $color-gamma;
 
 	@include media-min($screen-medium) {
 		width: 60%;

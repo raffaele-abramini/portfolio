@@ -7,7 +7,7 @@
 		margin: auto;
 		align-self: center;
 		width: 150px;
-		padding-top: 2rem;
+		padding: 2rem 1px 1px 1px;
 
 		@include media-min($screen-medium){
 			width: 180px;
