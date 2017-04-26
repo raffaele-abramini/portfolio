@@ -34,5 +34,9 @@
 		letter-spacing: 2px;
 		color: $color-beta;
 		text-transform: uppercase;
+
+		@include media-min($screen-medium) {
+			margin-bottom: 3rem;
+		}
 	}
 }
