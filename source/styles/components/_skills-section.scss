@@ -4,7 +4,11 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	padding: 5rem 0;
+	padding: 10rem 0;
+
+	@include media-min($screen-medium) {
+		padding: 5rem 0;
+	}
 }
 
 .c-skills-row {
