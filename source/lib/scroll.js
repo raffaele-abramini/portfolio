@@ -2,7 +2,7 @@ function ease(t) { return t*(2-t) }
 
 let initialPageScroll, initialTime;
 
-export default function scrollTo(destination, duration, isRecursivelyInvoked){
+export default function scrollTo(destination, duration, callback, isRecursivelyInvoked){
 	const now = global.performance.now();
 
 	if(!isRecursivelyInvoked) {
@@ -13,7 +13,10 @@ export default function scrollTo(destination, duration, isRecursivelyInvoked){
 	const n = ease((now - initialTime) / duration);
 	global.scrollTo(0, initialPageScroll + n * (destination - initialPageScroll));
 
-	if(now > initialTime + duration) return global.scrollTo(0, destination);
+	if(now > initialTime + duration) {
+		global.scrollTo(0, destination);
+		return callback();
+	}
 
-	global.requestAnimationFrame(scrollTo.bind(null, destination, duration, true));
+	global.requestAnimationFrame(scrollTo.bind(null, destination, duration, callback, true));
 }

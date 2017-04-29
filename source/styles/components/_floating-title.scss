@@ -1,6 +1,23 @@
 .c-floating-title {
 	position: fixed;
-	top:1rem;
-	right: 1rem;
+	top:1.45rem;
+	right: 3rem;
+	font-size: 1rem;
 	z-index: 3;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $color-alpha;
+	vertical-align: middle;
+
+	@include media-min($screen-medium){
+		right: 4rem;
+	}
+
+	&--black {
+		color: #000;
+	}
+	
+	&--white {
+		color: #fff;
+	}
 }

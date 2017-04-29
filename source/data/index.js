@@ -1,9 +1,25 @@
 export default {
 	homeSections : {
-		intro: 'intro',
-		portfolio :'portfolio',
-		about :'about',
-		skills :'skills'
+		intro: {
+			name: 'intro',
+			hasFloatingTitle: false,
+			floatingTitleColor: ''
+		},
+		portfolio: {
+			name: 'portfolio',
+			hasFloatingTitle: true,
+			floatingTitleColor: 'white'
+		},
+		about: {
+			name: 'about',
+			hasFloatingTitle: true,
+			floatingTitleColor: 'black'
+		},
+		skills: {
+			name: 'skills',
+			hasFloatingTitle: true,
+			floatingTitleColor: 'green'
+		}
 	},
 	projects : [
 		{
