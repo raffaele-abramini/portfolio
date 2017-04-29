@@ -24,7 +24,7 @@ class PageNav extends Component {
 	activateOnScroll(){
 		const {pageYOffset, innerHeight} = global;
 		if(!this.props.isScrollTriggered
-			&& pageYOffset > this.elem.offsetTop - innerHeight/3 && pageYOffset < this.elem.offsetTop + this.elem.offsetHeight) {
+			&& pageYOffset > this.elem.offsetTop - innerHeight/3 && pageYOffset < this.elem.offsetTop + this.elem.offsetHeight - innerHeight/3) {
 			this.props.setActiveSection(this.props.name);
 		}
 	}
