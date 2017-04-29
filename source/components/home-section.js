@@ -4,11 +4,6 @@ import classnames from 'classnames';
 import scrollTo from '../lib/scroll';
 import throttle from 'lodash.throttle';
 
-const almost = (num, substract) => {
-	return  substract ? num - num/10 : num + num/10;
-};
-
-
 class PageNav extends Component {
 	static propTypes = {
 		reduceOnMobile : PropTypes.bool,
@@ -18,7 +13,8 @@ class PageNav extends Component {
 	};
 
 	shouldComponentUpdate(nextProps) {
-		return this.props.isActive !== nextProps.isActive;
+		return this.props.isActive !== nextProps.isActive
+			|| this.props.isScrollTriggered !== nextProps.isScrollTriggered;
 	}
 
 	componentDidMount(){
@@ -28,7 +24,7 @@ class PageNav extends Component {
 	activateOnScroll(){
 		const {pageYOffset, innerHeight} = global;
 		if(!this.props.isScrollTriggered
-			&& pageYOffset <= almost(this.elem.offsetTop) && pageYOffset + innerHeight >= almost(this.elem.offsetTop)){
+			&& pageYOffset > this.elem.offsetTop - innerHeight/3 && pageYOffset < this.elem.offsetTop + this.elem.offsetHeight) {
 			this.props.setActiveSection(this.props.name);
 		}
 	}

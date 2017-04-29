@@ -13,7 +13,10 @@ export default function scrollTo(destination, duration, callback, isRecursivelyI
 	const n = ease((now - initialTime) / duration);
 	global.scrollTo(0, initialPageScroll + n * (destination - initialPageScroll));
 
-	if(now > initialTime + duration) return global.scrollTo(0, destination) && callback();
+	if(now > initialTime + duration) {
+		global.scrollTo(0, destination);
+		return callback();
+	}
 
 	global.requestAnimationFrame(scrollTo.bind(null, destination, duration, callback, true));
 }

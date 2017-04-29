@@ -5,17 +5,17 @@ export default {
 			hasFloatingTitle: false,
 			floatingTitleColor: ''
 		},
-		portfolio :{
+		portfolio: {
 			name: 'portfolio',
 			hasFloatingTitle: true,
 			floatingTitleColor: 'white'
 		},
-		about :{
+		about: {
 			name: 'about',
 			hasFloatingTitle: true,
 			floatingTitleColor: 'black'
 		},
-		skills :{
+		skills: {
 			name: 'skills',
 			hasFloatingTitle: true,
 			floatingTitleColor: 'green'
