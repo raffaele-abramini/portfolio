@@ -1,14 +1,23 @@
 import {
 	SWITCH_SECTION,
 	TOGGLE_NAV,
+	SET_ACTIVE_SECTION,
 	EXTEND_PORTFOLIO_SECTION,
 	TOGGLE_SKILLS_ROW,
-	LOAD_PORTOFOLIO_IMAGES
+	LOAD_PORTOFOLIO_IMAGES,
+	UNSET_SCROLL_TRIGGERED
 } from './types';
 
 export function switchSectionTo(newSection) {
 	return {
 		type: SWITCH_SECTION,
+		payload: newSection
+	}
+}
+
+export function setActiveSection(newSection) {
+	return {
+		type: SET_ACTIVE_SECTION,
 		payload: newSection
 	}
 }
@@ -36,5 +45,12 @@ export function toggleSkillsRow(rowName) {
 export function loadPortfolioImages() {
 	return {
 		type: LOAD_PORTOFOLIO_IMAGES,
+	}
+}
+
+export function unsetScrollTriggered() {
+	return {
+		type: UNSET_SCROLL_TRIGGERED,
+		payload: false
 	}
 }
