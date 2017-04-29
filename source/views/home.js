@@ -15,19 +15,19 @@ class Home extends Component {
 
 		this.sections = [
 			{
-				name: intro,
+				name: intro.name,
 				component: <Intro/>
 			},
 			{
-				name: portfolio,
+				name: portfolio.name,
 				component: <Portfolio/>
 			},
 			{
-				name: about,
+				name: about.name,
 				component: <About/>
 			},
 			{
-				name: skills,
+				name: skills.name,
 				component: <Skills/>,
 				reduceOnMobile: true
 			}

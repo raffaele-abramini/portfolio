@@ -9,10 +9,14 @@ import {
 	SET_ACTIVE_SECTION
 } from '../actions/types';
 
+const getName= (acc, section) =>{
+	acc.push(data.homeSections[section].name);
+	return acc;
+};
 
 const initialState = {
-	sections: data.homeSections,
-	activeSection: data.homeSections.intro,
+	sections: Object.keys(data.homeSections).reduce(getName, []),
+	activeSection: data.homeSections.intro.name,
 	isNavOpen: false,
 	isPortfolioExtended: false,
 	renderPortfolioImages: false,
