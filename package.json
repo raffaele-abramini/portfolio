@@ -13,11 +13,8 @@
     "copyAssets": "cp -R ./source/images/ ./dist/images/",
     "buildAndCopy": "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oldirony/portfolio.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/oldirony/portfolio.git",
+  "author": "oldirony <raffaele.abramini@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/oldirony/portfolio/issues"
@@ -27,6 +24,7 @@
     "classnames": "^2.2.5",
     "compression": "^1.6.2",
     "express": "^4.15.2",
+    "firebase": "^4.1.2",
     "history": "^4.6.1",
     "lodash.throttle": "^4.1.1",
     "react": "^15.5.4",

@@ -12,6 +12,7 @@ const compiledMarkup = (req)=> htmlFile.replace(`<div class="app"></div>`, `<div
 
 server.use(compression());
 server.use('/assets', express.static('dist'));
+server.use(express.static('.well-known'));
 
 server.get('*', (req, res) => {
 	if (context.url) {
