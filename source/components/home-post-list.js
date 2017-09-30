@@ -16,7 +16,7 @@ class PostList extends Component {
 	renderPosts() {
 		return this.props.posts.map((post, index) => (
 			<article key={index}
-					 className="c-post-list__article c-post">
+					 className="c-post-list__article c-post o-animate-in-view o-animate-in-view--slide">
 				<a className="c-post__link" href={post.link[0]}>
 					<h3 className="c-post__title">{post.title[0]}</h3>
 					<p className="c-post__date">{post.pubDate[0]}</p>
@@ -30,8 +30,8 @@ class PostList extends Component {
 
     render(){
         return (
-            <div className="c-post-list">
-				<h2 className="c-post-list__title">
+            <div className="c-post-list" data-js-animate-in-view>
+				<h2 className="c-post-list__title o-animate-in-view">
 					My latest posts
 				</h2>
 
