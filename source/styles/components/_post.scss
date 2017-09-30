@@ -1,15 +1,29 @@
 .c-post {
+	$scope: &;
+
 	padding: 1rem;
 	background: white;
 	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+
+	&:hover {
+		#{$scope}__title {
+			color: #000;
+		}
+	}
 
 	&__link {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
 		text-decoration: none;
 		color: $color-beta;
 	}
 
 	&__title {
 		color: $color-alpha--darker;
+		transition: color .2s;
 	}
 
 	&__date {
@@ -18,9 +32,10 @@
 	}
 
 	&__categories {
+		flex: 0 0 auto;
 		display: flex;
 		padding: 0;
-		margin: 0;
+		margin: auto 0 0;
 		flex-wrap: wrap;
 	}
 

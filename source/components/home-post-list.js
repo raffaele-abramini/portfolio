@@ -40,6 +40,12 @@ class PostList extends Component {
 				<div className="c-post-list__articles">
 					{this.renderPosts()}
 				</div>
+
+				<a className="c-post-list__see-all-link o-animate-in-view o-animate-in-view--slide"
+					href="https://medium.com/@oldirony"
+					target="_blank">
+					See all posts on Medium
+				</a>
 			</div>
         )
     }
