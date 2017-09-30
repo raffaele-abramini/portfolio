@@ -13,7 +13,8 @@ export default {
 		postList: {
 			name: 'recent posts',
 			hasFloatingTitle: true,
-			floatingTitleColor: 'black'
+			floatingTitleColor: 'black',
+			backgroundColor: 'pale-green'
 		},
 		about: {
 			name: 'about',

@@ -9,7 +9,8 @@ class PageNav extends Component {
 		reduceOnMobile : PropTypes.bool,
 		name : PropTypes.string.isRequired,
 		isActive: PropTypes.bool.isRequired,
-		isScrollTriggered: PropTypes.bool.isRequired
+		isScrollTriggered: PropTypes.bool.isRequired,
+		backgroundColor: PropTypes.string
 	};
 
 	shouldComponentUpdate(nextProps) {
@@ -36,10 +37,11 @@ class PageNav extends Component {
 	}
 
     render(){
-    	const {children, reduceOnMobile} = this.props;
+    	const {children, reduceOnMobile, backgroundColor} = this.props;
     	const classNames = classnames({
 			'c-homepage-section': true,
-			'c-homepage-section--reduce-on-mobile' : reduceOnMobile
+			'c-homepage-section--reduce-on-mobile' : reduceOnMobile,
+			'c-homepage-section--pale-green': backgroundColor === 'pale-green'
 		});
 
         return (

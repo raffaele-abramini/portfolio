@@ -25,7 +25,8 @@ class Home extends Component {
 			},
 			{
 				name: postList.name,
-				component: <PostList/>
+				component: <PostList/>,
+				backgroundColor: postList.backgroundColor
 			},
 			{
 				name: about.name,
@@ -53,8 +54,11 @@ class Home extends Component {
     }
 
     renderSections(){
-    	return this.sections.map(({name, component, reduceOnMobile})=> (
-			<Section name={name} key={name} reduceOnMobile={reduceOnMobile}>
+    	return this.sections.map(({name, component, reduceOnMobile, backgroundColor})=> (
+			<Section name={name}
+					 key={name}
+					 reduceOnMobile={reduceOnMobile}
+					 backgroundColor={backgroundColor}>
 				{component}
 			</Section>
 		));
