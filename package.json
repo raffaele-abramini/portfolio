@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/oldirony/portfolio#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
@@ -38,7 +39,8 @@
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "css-loader": "^0.28.0",
@@ -48,6 +50,7 @@
     "prop-types": "^15.5.8",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "xml2js": "^0.4.19"
   }
 }
