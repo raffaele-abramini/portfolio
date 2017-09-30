@@ -24,6 +24,10 @@ class Home extends Component {
 				component: <Portfolio/>
 			},
 			{
+				name: postList.name,
+				component: <PostList/>
+			},
+			{
 				name: about.name,
 				component: <About/>
 			},
@@ -31,10 +35,6 @@ class Home extends Component {
 				name: skills.name,
 				component: <Skills/>,
 				reduceOnMobile: true
-			},
-			{
-				name: postList.name,
-				component: <PostList/>
 			}
 		]
 	}

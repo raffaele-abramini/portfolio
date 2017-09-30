@@ -10,6 +10,11 @@ export default {
 			hasFloatingTitle: true,
 			floatingTitleColor: 'white'
 		},
+		postList: {
+			name: 'recent posts',
+			hasFloatingTitle: true,
+			floatingTitleColor: 'black'
+		},
 		about: {
 			name: 'about',
 			hasFloatingTitle: true,
@@ -19,11 +24,6 @@ export default {
 			name: 'skills',
 			hasFloatingTitle: true,
 			floatingTitleColor: 'green'
-		},
-		postList: {
-			name: 'postList',
-			hasFloatingTitle: true,
-			floatingTitleColor: 'black'
 		}
 	},
 	projects : [

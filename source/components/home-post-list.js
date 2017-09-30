@@ -17,7 +17,9 @@ class PostList extends Component {
 		return this.props.posts.map((post, index) => (
 			<article key={index}
 					 className="c-post-list__article c-post o-animate-in-view o-animate-in-view--slide">
-				<a className="c-post__link" href={post.link[0]}>
+				<a className="c-post__link"
+				   href={post.link[0]}
+				   target="_blank">
 					<h3 className="c-post__title">{post.title[0]}</h3>
 					<p className="c-post__date">{post.pubDate[0]}</p>
 					<ul className="c-post__categories">
