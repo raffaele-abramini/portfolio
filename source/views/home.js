@@ -5,13 +5,14 @@ import Intro from '../components/home-intro';
 import Portfolio from '../containers/portfolio-container';
 import About from '../components/home-about';
 import Skills from '../containers/skills-container';
+import PostList from '../containers/post-list-container';
 import data from '../data';
 import Animate from '../lib/animate';
 
 class Home extends Component {
 	constructor(props) {
 		super(props);
-		const {intro, about, portfolio, skills} = data.homeSections;
+		const {intro, about, portfolio, skills, postList} = data.homeSections;
 
 		this.sections = [
 			{
@@ -30,6 +31,10 @@ class Home extends Component {
 				name: skills.name,
 				component: <Skills/>,
 				reduceOnMobile: true
+			},
+			{
+				name: postList.name,
+				component: <PostList/>
 			}
 		]
 	}
