@@ -19,6 +19,11 @@ export default {
 			name: 'skills',
 			hasFloatingTitle: true,
 			floatingTitleColor: 'green'
+		},
+		postList: {
+			name: 'postList',
+			hasFloatingTitle: true,
+			floatingTitleColor: 'black'
 		}
 	},
 	projects : [
