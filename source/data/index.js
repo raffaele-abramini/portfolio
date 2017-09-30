@@ -32,13 +32,13 @@ export default {
 			"title": "Atv.suzuki.co.uk",
 			"url": "https://atv.suzuki.co.uk",
 			"tags": "Frontend development, gulp, jquery, oojs, sass",
-			"image": "/assets/images/portfolio/suzuki-bikes.jpg"
+			"image": "/assets/images/portfolio/suzuki-atv.jpg"
 		},
 		{
 			"title": "Marine.suzuki.co.uk",
 			"url": "https://marine.suzuki.co.uk",
 			"tags": "Frontend development, gulp, jquery, oojs, sass",
-			"image": "/assets/images/portfolio/suzuki-cars.jpg"
+			"image": "/assets/images/portfolio/suzuki-marine.jpg"
 		},
 		{
 			"title": "Bikes.suzuki.co.uk",
