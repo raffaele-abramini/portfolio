@@ -1,0 +1,39 @@
+.c-post {
+	padding: 1rem;
+	background: white;
+	border-radius: 3px;
+
+	&__link {
+		text-decoration: none;
+		color: $color-beta;
+	}
+
+	&__title {
+		color: $color-alpha--darker;
+	}
+
+	&__date {
+		font-size: .8rem;
+		padding-bottom: 1rem;
+	}
+
+	&__categories {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		flex-wrap: wrap;
+	}
+
+	&__category {
+		list-style: none;
+		color: #fff;
+		padding: .3rem;
+		border-radius: 3px;
+		background: $color-beta;
+		white-space: nowrap;
+		text-transform: uppercase;
+		font-size: .7rem;
+		margin-bottom: .4rem;
+		margin-right: .4rem;
+	}
+}

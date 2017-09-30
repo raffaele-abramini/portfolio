@@ -1,0 +1,38 @@
+.c-post-list {
+	box-sizing: border-box;
+	padding: 2.5rem;
+	width: 100%;
+	background: $color-alpha;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__title {
+		margin-bottom: 2rem;
+	}
+
+	&__articles {
+		@include media-min($screen-medium-large) {
+			display: flex;
+			justify-content: space-between;
+			align-content: flex-start;
+		}
+	}
+
+	&__article {
+		box-sizing: border-box;
+
+		& + & {
+			margin-top: 1rem;
+		}
+
+		@include media-min($screen-medium-large) {
+			flex: 0 1 calc(33% - 1.5rem);
+
+			& + & {
+				margin-top: 0;
+			}
+		}
+	}
+}

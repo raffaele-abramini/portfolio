@@ -8,17 +8,21 @@ class PostList extends Component {
 
 	renderCategories(categories) {
 		return categories.map((cat, index) => (
-			<li key={index}>{cat}</li>
+			<li key={index}
+				className="c-post__category">{cat}</li>
 		))
 	}
 
 	renderPosts() {
 		return this.props.posts.map((post, index) => (
-			<article key={index}>
-				<a href={post.link[0]}>
-					<h3>{post.title[0]}</h3>
-					<div>{post.pubDate[0]}</div>
-					<ul>{this.renderCategories(post.category)}</ul>
+			<article key={index}
+					 className="c-post-list__article c-post">
+				<a className="c-post__link" href={post.link[0]}>
+					<h3 className="c-post__title">{post.title[0]}</h3>
+					<p className="c-post__date">{post.pubDate[0]}</p>
+					<ul className="c-post__categories">
+						{this.renderCategories(post.category)}
+					</ul>
 				</a>
 			</article>
 		))
@@ -26,12 +30,14 @@ class PostList extends Component {
 
     render(){
         return (
-            <div>
-				My latest posts
+            <div className="c-post-list">
+				<h2 className="c-post-list__title">
+					My latest posts
+				</h2>
 
-				<hr/>
-
-				{this.renderPosts()}
+				<div className="c-post-list__articles">
+					{this.renderPosts()}
+				</div>
 			</div>
         )
     }
