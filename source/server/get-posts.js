@@ -6,8 +6,11 @@ export default (req, res) => {
 	axios.get(POSTS_URL)
 		.then(response => {
 			parseString(response.data, (err, res2) =>{
-				res.end(JSON.stringify(res2.rss.channel[0].item))
+				res.send(JSON.stringify(res2.rss.channel[0].item.slice(0, 4)))
 			})
 		})
-		.catch(response => res.end(response.data));
+		.catch(err => {
+			console.error(err);
+			res.status(500).send({ error: 'Couldn\'t fetch posts' })
+		});
 }
