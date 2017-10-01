@@ -30,5 +30,11 @@ module.exports = {
 				}
 			}
 		]
-	}
+	},
+
+	resolve: {
+		alias: {
+			utilities: path.resolve(__dirname, 'source/lib/utilities.js')
+		}
+	},
 };
