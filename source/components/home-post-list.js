@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import { isClient } from 'utilities';
 
 class PostList extends Component {
 	componentWillMount() {
-		this.props.fetchPosts();
+		// Fetch posts only on client side
+		if(isClient()) this.props.fetchPosts();
 	}
 
 	renderCategories(categories) {
