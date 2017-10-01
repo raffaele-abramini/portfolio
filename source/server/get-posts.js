@@ -1,17 +1,13 @@
 import axios from 'axios';
 import { parseString } from 'xml2js';
-const postUrl = 'https://medium.com/feed/@oldirony?format=json';
+const POSTS_URL = 'https://medium.com/feed/@oldirony';
 
 export default (req, res) => {
-	new Promise((resolve, reject) => {
-		axios.get(postUrl).then(resolve).catch(reject);
-	})
+	axios.get(POSTS_URL)
 		.then(response => {
-				parseString(response.data, (err, res2) =>{
-					res.end(JSON.stringify(res2.rss.channel[0].item))
-				})
-
+			parseString(response.data, (err, res2) =>{
+				res.end(JSON.stringify(res2.rss.channel[0].item))
+			})
 		})
-		.catch(response => res.end(response.data))
-
+		.catch(response => res.end(response.data));
 }
