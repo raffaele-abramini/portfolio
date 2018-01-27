@@ -208,22 +208,12 @@ export default {
 			name: 'Languages',
 			skills: [
 				'Javascript',
-				'SASS',
+				'CSS + SASS',
 				'HTML 5',
 				'PHP',
 				'Shell',
 				'Ruby + Rails',
 				'MySQL'
-			]
-		},
-		{
-			name: 'CMS',
-			skills: [
-				'Silverstripe',
-				'Wordpress',
-				'Joomla',
-				'Drupal',
-				'Opencart'
 			]
 		},
 		{
@@ -239,8 +229,18 @@ export default {
 				'Docker',
 				'Vagrant',
 				'NPM',
-				'jQuery',
+				'jQuery (if REALLY needed)',
 				'Continuous integration'
+			]
+		},
+		{
+			name: 'CMS',
+			skills: [
+				'Silverstripe',
+				'Wordpress',
+				'Joomla',
+				'Drupal',
+				'Opencart'
 			]
 		},
 		{

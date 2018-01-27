@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react';
 import proptypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -6,7 +6,7 @@ import PortfolioItem from './portfolio-item';
 
 
 //loadPortfolioImages
-class Portfolio extends Component{
+class Portfolio extends PureComponent {
 	componentDidMount(){
 		this.props.loadPortfolioImages()
 	}

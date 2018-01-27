@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { PureComponent} from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import scrollTo from '../lib/scroll';
 import throttle from 'lodash.throttle';
 
-class PageNav extends Component {
+class PageNav extends PureComponent {
 	static propTypes = {
 		reduceOnMobile : PropTypes.bool,
 		name : PropTypes.string.isRequired,

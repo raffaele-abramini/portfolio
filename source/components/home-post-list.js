@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { isClient } from 'utilities';
 
-class PostList extends Component {
+class PostList extends PureComponent {
 	componentWillMount() {
 		// Fetch posts only on client side
 		if(isClient()) this.props.fetchPosts();

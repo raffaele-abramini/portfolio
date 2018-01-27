@@ -4,9 +4,10 @@ const About = ({})=>{
     return (
 		<div className="c-about-section">
 			<h3 className="c-about-section__title o-animate-in-view o-animate-in-view--slide">Hi! I am Raffaele!</h3>
-			<p className="o-animate-in-view o-animate-in-view--slide">I'm a 26 years old Italian <span className="u-highlight">web developer</span> and I love coding and building websites and web apps. I earned a Bachelor’s degree in Communication Design at Polytechnic University of Milan in 2012. For two years I worked in a communication agency. I have knowledge of web languages such as html, css, javascript, PHP, SQL and techniques such as SEO, mobile optimization, UI &amp; UX improvement.</p>
-			<p className="o-animate-in-view o-animate-in-view--slide">Bored by the static Italian environment, I decided to move to London in September 2014 where I was hired as a Front-End Developer by a prestigious School of English. I coded the website for this school and a web app for the online tests.</p>
-			<p className="o-animate-in-view o-animate-in-view--slide">Since May 2015 I've been working as frontend (and backend) developer for <a href="http://steellondon.com/" title="STEEL London agency website" target="_blank">STEEL London</a>, growing my knowledge of new technologies and techniques as well as team working and agile workflow. I created websites interfaces with SASS and vanilla js/jQuery and structures based on the Silverstripe Framework. In several occasions I also projected, realised and integrated Angular applications.</p>
+			<p className="o-animate-in-view o-animate-in-view--slide">I'm a 27 years old Italian <span className="u-highlight">frontend developer</span>. I've been professionally coding and building websites for  more than 5 years.</p>
+			<p className="o-animate-in-view o-animate-in-view--slide">I got a degree in communication design and patterns in September 2012. After almost 2 years working as fullstack Wordpress developer in my native valley, I moved to London looking for a more dynamic and challenging environment.</p>
+			<p className="o-animate-in-view o-animate-in-view--slide">I've been working as a Frontend developer since then, using several technology stacks: from jQuery to vanilla JS, from Angular 1 to React, from Grunt to Webpack, passing through Gulp.</p>
+			<p className="o-animate-in-view o-animate-in-view--slide">I'm currently working at <a href="http://foolproof.co.uk">Foolproof</a>, a UX agency. Here I've the chance of experimenting with new technologies and understanding in deep the world behind design and UX.</p>
 			<p className="o-animate-in-view o-animate-in-view--slide">You can find the source code of my portfolio on <a href="https://github.com/oldirony/portfolio" target="_blank">Github</a>.</p>
 		</div>
 	)

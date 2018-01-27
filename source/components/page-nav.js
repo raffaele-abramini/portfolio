@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react'
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import SocialNav from './social-nav';
 import FloatingTitle from './floating-title';
 
-class PageNav extends Component {
+class PageNav extends PureComponent {
 
 	static propTypes = {
 		isNavOpen: PropTypes.bool.isRequired,
