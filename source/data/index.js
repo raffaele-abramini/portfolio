@@ -29,6 +29,12 @@ export default {
 	},
 	projects : [
 		{
+			"title": "PSG.fr",
+			"url": "https://psg.fr",
+			"tags": "Frontend development, gulp, jquery, oojs, sass",
+			"image": "/assets/images/portfolio/psg.jpg"
+		},
+		{
 			"title": "Atv.suzuki.co.uk",
 			"url": "https://atv.suzuki.co.uk",
 			"tags": "Frontend development, gulp, jquery, oojs, sass",
