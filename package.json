@@ -20,7 +20,7 @@
     "url": "https://github.com/oldirony/portfolio/issues"
   },
   "engines": {
-    "node": "v10.14.2"
+    "node": "10.14.2"
   },
   "homepage": "https://github.com/oldirony/portfolio#readme",
   "dependencies": {
