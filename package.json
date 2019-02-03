@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/oldirony/portfolio/issues"
   },
+  "node": "v10.14.2",
   "homepage": "https://github.com/oldirony/portfolio#readme",
   "dependencies": {
     "axios": "^0.16.2",
