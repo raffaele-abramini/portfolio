@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run buildServer:dev & npm run buildClient:dev & node node_modules/.bin/nodemon ./server.bundle.js",
+    "start:dev": "npm run buildServer:dev & npm run buildClient:dev & node node_modules/.bin/nodemon ./server.bundle.js",
     "buildServer:dev": "node node_modules/.bin/webpack --config ./webpack.config.server.js --watch",
     "buildClient:dev": "node node_modules/.bin/webpack --watch",
-    "start:prod": "npm run buildAndCopy && node ./server.bundle.js",
+    "start": "npm run buildAndCopy && node ./server.bundle.js",
     "buildServer:prod": "node node_modules/.bin/webpack --config ./webpack.config.server.js -p",
     "buildClient:prod": "node node_modules/.bin/webpack -p",
     "copyAssets": "cp -R ./source/images/ ./dist/images/",
-    "buildAndCopy": "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets",
-    "heroku-postbuild": "npm run start:prod"
+    "buildAndCopy": "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets"
   },
   "repository": "git+https://github.com/oldirony/portfolio.git",
   "author": "oldirony <raffaele.abramini@gmail.com>",
