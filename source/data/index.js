@@ -193,7 +193,7 @@ export default {
 	],
 	social : [
 		{
-			link : 'https://github.com/oldirony',
+			link : 'https://github.com/raffaele-abramini',
 			type: 'github'
 		},
 		{
@@ -205,7 +205,7 @@ export default {
 			type: 'linkedin'
 		},
 		{
-			link : 'https://twitter.com/anyoldirony',
+			link : 'https://twitter.com/raff_ae',
 			type: 'twitter'
 		},
 	],
