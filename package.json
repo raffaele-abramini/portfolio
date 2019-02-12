@@ -13,16 +13,13 @@
     "copyAssets": "cp -R ./source/images/ ./dist/images/",
     "buildAndCopy": "npm run buildServer:prod && npm run buildClient:prod && npm run copyAssets"
   },
-  "repository": "git+https://github.com/oldirony/portfolio.git",
-  "author": "oldirony <raffaele.abramini@gmail.com>",
+  "repository": "git+https://github.com/raffaele-abramini/portfolio.git",
+  "author": "Raffaele Abramini <raffaele.abramini@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oldirony/portfolio/issues"
+    "url": "https://github.com/raffaele-abramini/portfolio/issues"
   },
-  "engines": {
-    "node": "10.14.2"
-  },
-  "homepage": "https://github.com/oldirony/portfolio#readme",
+  "homepage": "https://github.com/raffaele-abramini/portfolio#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-core": "^6.26.3",
