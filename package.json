@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/raffaele-abramini/portfolio#readme",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.7.0",
