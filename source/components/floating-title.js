@@ -4,7 +4,7 @@ import data from '../data';
 import classnames from 'classnames';
 
 const FloatingTitle = ({activeSection})=>{
-	const {hasFloatingTitle, floatingTitleColor } = data.homeSections[Object.keys(data.homeSections).find((section)=> data.homeSections[section].name===activeSection)];
+	const {hasFloatingTitle, floatingTitleColor } = Object.values(data.homeSections).find(({ name })=> name===activeSection);
 
 	const classes = classnames({
 		"c-floating-title": true,

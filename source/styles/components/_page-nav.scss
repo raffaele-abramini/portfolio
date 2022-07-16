@@ -71,7 +71,8 @@
 	}
 
 	&__toggle-inner {
-		padding: 1rem;
+		padding: 0.35rem 0.75rem;
+		margin: 1rem 0.25rem;
 		align-self: flex-end;
 		color: #fff;
 		font-size: 1.1rem;
@@ -79,6 +80,10 @@
 
 		&:hover {
 			color: rgba(black, .5);
+		}
+
+		&:focus {
+			outline: 3px solid white;
 		}
 	}
 
@@ -98,7 +103,8 @@
 		letter-spacing: 1.5px;
 		transition: background .2s;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background: rgba(black, .2);
 		}
 	}

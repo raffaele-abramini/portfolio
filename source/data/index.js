@@ -19,7 +19,7 @@ export default {
 		about: {
 			name: 'about',
 			hasFloatingTitle: true,
-			floatingTitleColor: 'black'
+			floatingTitleColor: 'white'
 		},
 		skills: {
 			name: 'skills',

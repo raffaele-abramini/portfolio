@@ -7,4 +7,10 @@
 	&:focus {
 		outline: $color-alpha 3px solid;
 	}
+
+	&--inverted {
+		&:focus {
+			outline: white 3px solid;
+		}
+	}
 }

@@ -21,7 +21,7 @@ const PortfolioItem = ({title, url, image, tags, renderPortfolioImages})=>{
 	</article>
 };
 
-PortfolioItem.PropTypes = {
+PortfolioItem.propTypes = {
 	title: PropTypes.string.isRequired,
 	url: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
