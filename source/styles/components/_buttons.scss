@@ -3,4 +3,8 @@
 	box-shadow: none;
 	background: none;
 	cursor: pointer;
+
+	&:focus {
+		outline: $color-alpha 3px solid;
+	}
 }

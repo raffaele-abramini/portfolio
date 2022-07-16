@@ -14,7 +14,7 @@ const FloatingTitle = ({activeSection})=>{
 	});
 
     return (
-		<h3 className={classes}>
+		<h3 className={classes} aria-live="polite">
 			{hasFloatingTitle && activeSection}
 		</h3>
 	);

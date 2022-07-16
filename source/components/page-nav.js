@@ -27,8 +27,9 @@ class PageNav extends PureComponent {
 					<FloatingTitle activeSection={this.props.activeSection} />
 
 					<button className="c-page-nav__toggle c-button--no-style o-animate-on-load o-animate-on-load--3"
+									aria-label="Toggle side navigation"
 							onClick={()=>this.handleToggleClick()}>
-						<svg className="c-icon">
+						<svg className="c-icon" aria-hidden>
 							<use xlinkHref="#nav" />
 						</svg>
 					</button>
@@ -38,7 +39,7 @@ class PageNav extends PureComponent {
 				<aside className="c-page-nav__aside">
 					<button className="c-page-nav__toggle-inner c-button--no-style"
 							onClick={()=>this.handleToggleClick()}>
-						X
+						<span aria-hidden>X</span>
 					</button>
 
 					<nav className="c-page-nav__nav">
@@ -69,14 +70,16 @@ class PageNav extends PureComponent {
     	return (
 			<div className="c-page-nav__arrows">
 				<button className={arrowClasses(true)}
-						onClick={()=>this.arrowClick(true)}>
-					<svg className="c-icon">
+						onClick={()=>this.arrowClick(true)}
+					aria-label="Move to previous section">
+					<svg className="c-icon" aria-hidden>
 						<use xlinkHref="#chevron-up" />
 					</svg>
 				</button>
 				<button className={arrowClasses()}
-						onClick={()=>this.arrowClick()}>
-					<svg className="c-icon">
+						onClick={()=>this.arrowClick()}
+								aria-label="Move to previous section">
+					<svg className="c-icon" aria-hidden>
 						<use xlinkHref="#chevron-down" />
 					</svg>
 				</button>
