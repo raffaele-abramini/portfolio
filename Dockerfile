@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:gallium
 
 ADD ./ /app/
 
